@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-router = APIRouter(prefix="/mutualfund", tags=["mutualfund"])
+router = APIRouter()
 
 
 @router.get("/")

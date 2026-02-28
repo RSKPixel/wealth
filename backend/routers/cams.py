@@ -5,8 +5,8 @@ import re
 import pandas as pd
 import io
 from core.dependencies import engine, NAV_FILE_PATH
+from core.dependencies import wealth_transactions
 from sqlalchemy.dialects.postgresql import insert
-from sqlalchemy import Table, MetaData
 from sqlalchemy.orm import sessionmaker
 
 router = APIRouter()
@@ -102,10 +102,6 @@ def update_database(data: pd.DataFrame):
 
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    # If using Core (table reflection)
-    metadata = MetaData()
-    wealth_transactions = Table("wealth_transactions", metadata, autoload_with=engine)
 
     # Prepare records from dataframe
     records = data.to_dict(orient="records")

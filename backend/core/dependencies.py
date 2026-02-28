@@ -2,6 +2,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.engine import URL
 from pathlib import Path
 import os
+from sqlalchemy import Table, MetaData
+
 
 # BASE_DIR = Path(__file__).resolve().parent.parent
 # DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -24,3 +26,6 @@ engine = create_engine(
     max_overflow=20,
     pool_pre_ping=True,
 )
+
+metadata = MetaData()
+wealth_transactions = Table("wealth_transactions", metadata, autoload_with=engine)

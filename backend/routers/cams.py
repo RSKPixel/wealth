@@ -5,8 +5,12 @@ import re
 import pandas as pd
 import io
 from core.dependencies import engine, NAV_FILE_PATH
+from sqlalchemy.dialects.postgresql import insert
+from sqlalchemy import Table, MetaData
+from sqlalchemy.orm import sessionmaker
 
 router = APIRouter()
+
 
 ALLOWED_FILE_TYPES = ["application/pdf"]
 
@@ -34,7 +38,6 @@ async def get_cams_data(file: UploadFile = Form(...), client_pan: str = Form(...
     data["txn_seq"] = (
         data.groupby(["client_pan", "folio", "isin", "date"]).cumcount() + 1
     )
-
     data["transaction_id"] = data.apply(
         lambda row: f"{row['date'].strftime('%Y%m%d')}-{row['txn_seq']}", axis=1
     )
@@ -51,11 +54,11 @@ async def get_cams_data(file: UploadFile = Form(...), client_pan: str = Form(...
             "client_pan": "client_pan",
             "isin": "instrument",
             "folio": "folio",
+            "amc": "folio_name",
             "fund_name": "instrument_name",
-            "amc": "amc",
-            "trade_type": "trade_type",
+            "trade_type": "transaction_type",
             "transaction_id": "transaction_id",
-            "date": "trade_date",
+            "date": "transaction_date",
             "units": "quantity",
             "trade_value": "value",
             "price": "price",
@@ -68,17 +71,20 @@ async def get_cams_data(file: UploadFile = Form(...), client_pan: str = Form(...
             "portfolio",
             "asset_class",
             "folio",
+            "folio_name",
             "instrument",
             "instrument_name",
-            "trade_type",
+            "transaction_type",
             "transaction_id",
-            "trade_date",
+            "transaction_date",
             "quantity",
             "price",
             "value",
         ]
     ]
+    data = data.round({"price": 2, "value": 2})
 
+    update_database(data)
     data.to_clipboard(index=False)  # For debugging: copy output to clipboard
     return {
         "status": "success",
@@ -93,6 +99,44 @@ async def get_cams_data(file: UploadFile = Form(...), client_pan: str = Form(...
 def update_database(data: pd.DataFrame):
     # Placeholder for database update logic
     # You can use SQLAlchemy or any database connector to insert data into your database
+
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    # If using Core (table reflection)
+    metadata = MetaData()
+    wealth_transactions = Table("wealth_transactions", metadata, autoload_with=engine)
+
+    # Prepare records from dataframe
+    records = data.to_dict(orient="records")
+
+    with session.begin():
+        stmt = insert(wealth_transactions).values(records)
+
+        stmt = stmt.on_conflict_do_update(
+            index_elements=[
+                "client_pan",
+                "folio",
+                "instrument",
+                "transaction_date",
+                "transaction_id",
+            ],  # your unique constraint columns
+            set_={
+                col: stmt.excluded[col]
+                for col in [
+                    "portfolio",
+                    "asset_class",
+                    "folio_name",
+                    "instrument_name",
+                    "transaction_type",
+                    "value",
+                    "quantity",
+                    "price",
+                ]
+            },
+        )
+
+        session.execute(stmt)
     pass
 
 

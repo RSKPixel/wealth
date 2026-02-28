@@ -1,0 +1,19 @@
+date,scheme_code,scheme_name,amc_code,amc_name,isin_1,isin_2,nav,asset_class,scheme_type
+2026-02-27,148550,SBI Floating Rate Debt Fund - Direct Plan - Growth,22,SBI Mutual Fund,INF200KA1R64,-,13.9507,Debt,Debt
+2026-02-27,119707,SBI GILT FUND - DIRECT PLAN - GROWTH,22,SBI Mutual Fund,INF200K01SH3,-,71.1136,Debt,Debt
+2026-03-01,119091,HDFC Liquid Fund - Growth Option - Direct Plan,9,HDFC Mutual Fund,INF179KB1HP9,-,5383.7912,Debt,Debt
+2026-02-27,120197,ICICI Prudential Liquid Fund - Direct Plan - Growth,20,ICICI Prudential Mutual Fund,INF109K01Q49,-,405.5798,Debt,Debt
+2026-02-28,118701,Nippon India Liquid Fund - Direct Plan Growth Plan - Growth Option,21,Nippon India Mutual Fund,INF204K01ZH0,-,6709.803,Debt,Debt
+2026-02-27,119800,SBI Liquid Fund - DIRECT PLAN -Growth,22,SBI Mutual Fund,INF200K01UT4,-,4283.7578,Debt,Debt
+2026-02-27,122639,Parag Parikh Flexi Cap Fund - Direct Plan - Growth,64,PPFAS Mutual Fund,INF879O01027,-,91.9544,Equity,Equity
+2026-02-27,120465,Axis Large Cap Fund - Direct Plan - Growth,53,Axis Mutual Fund,INF846K01DP8,-,70.07,Equity,Equity
+2026-02-27,100524,Franklin INDIA OPPORTUNITIES FUND - IDCW ,27,Franklin Templeton Mutual Fund,INF090I01858,INF090I01866,36.3377,Equity,Equity
+2026-02-27,103034,SBI MNC FUND - REGULAR PLAN -GROWTH,22,SBI Mutual Fund,INF200K01271,-,358.8823,Equity,Equity
+2026-02-27,120828,quant Small Cap Fund - Growth Option - Direct Plan,13,quant Mutual Fund,INF966L01689,-,258.4345,Equity,Equity
+2026-02-27,102885,SBI EQUITY HYBRID FUND - REGULAR PLAN -Growth,22,SBI Mutual Fund,INF200K01107,-,304.4762,Equity,Hybrid
+2026-02-27,118663,Nippon India Gold Savings Fund - Direct Plan Growth Plan - Growth Option,21,Nippon India Mutual Fund,INF204K01YC4,-,63.4441,Gold,Fund of Funds
+2026-02-27,119788,SBI GOLD FUND- DIRECT PLAN - GROWTH,22,SBI Mutual Fund,INF200K01RP8,-,48.6643,Equity,Fund of Funds
+2026-02-27,119063,HDFC Nifty 50 Index Fund - Direct Plan,9,HDFC Mutual Fund,INF179K01WM1,-,244.8257,Equity,Index Funds
+2026-02-27,120684,ICICI Prudential Nifty Next 50 Index Fund - Direct Plan -  Growth,20,ICICI Prudential Mutual Fund,INF109K01Y80,-,64.6555,Equity,Index Funds
+2026-02-27,148726,Nippon India Nifty Midcap 150 Index Fund - Direct Plan - Growth Option,21,Nippon India Mutual Fund,INF204KB18Z7,-,25.2734,Equity,Index Funds
+2026-02-27,120716,UTI Nifty 50 Index Fund - Growth Option- Direct,28,UTI Mutual Fund,INF789F01XA0,-,176.0438,Equity,Index Funds

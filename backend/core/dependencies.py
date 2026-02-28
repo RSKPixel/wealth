@@ -10,6 +10,7 @@ from sqlalchemy import Table, MetaData
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NAV_FILE_PATH = Path(BASE_DIR) / "data" / "NAVOpen.txt"
+url = "https://www.amfiindia.com/spages/NAVAll.txt"
 
 DATABASE_URL = URL.create(
     drivername="postgresql+psycopg2",
@@ -29,3 +30,4 @@ engine = create_engine(
 
 metadata = MetaData()
 wealth_transactions = Table("wealth_transactions", metadata, autoload_with=engine)
+mutualfund_eod = Table("mutualfund_eod", metadata, autoload_with=engine)

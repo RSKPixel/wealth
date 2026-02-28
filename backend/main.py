@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import mutualfund, cams
+from routers import mutualfund, cams, data
 import uvicorn
 
 app = FastAPI()
@@ -8,6 +8,7 @@ app = FastAPI()
 # Mutual Fund Routes
 app.include_router(mutualfund.router, prefix="/mutualfund", tags=["mutualfund"])
 app.include_router(cams.router, prefix="/mutualfund/cams", tags=["cams"])
+app.include_router(data.router, prefix="/mutualfund/data", tags=["eod"])
 
 app.add_middleware(
     CORSMiddleware,

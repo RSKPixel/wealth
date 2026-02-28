@@ -21,6 +21,8 @@ async def get_cams_data(file: UploadFile = Form(...), pan: str = Form(None)):
             "data": [],
         }
 
+    parsed_data = parse_cams_data(file_content)
+
     return {
         "status": "success",
         "message": "File uploaded successfully",
@@ -28,3 +30,8 @@ async def get_cams_data(file: UploadFile = Form(...), pan: str = Form(None)):
             "pan": pan,
         },
     }
+
+
+def parse_cams_data(file_content):
+
+    return {"status": "success", "message": "File parsed successfully", "data": {}}

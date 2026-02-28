@@ -5,8 +5,9 @@ import uvicorn
 
 app = FastAPI()
 
+# Mutual Fund Routes
 app.include_router(mutualfund.router, prefix="/mutualfund", tags=["mutualfund"])
-app.include_router(cams.router, prefix="/cams", tags=["cams"])
+app.include_router(cams.router, prefix="/mutualfund/cams", tags=["cams"])
 
 app.add_middleware(
     CORSMiddleware,

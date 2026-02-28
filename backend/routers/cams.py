@@ -22,21 +22,70 @@ async def get_cams_data(file: UploadFile = Form(...), client_pan: str = Form(...
             "data": [],
         }
 
-    parsed_data = parse_cams_data(file_content, client_pan)
+    data = parse_cams_data(file_content, client_pan)
 
-    if not isinstance(parsed_data, pd.DataFrame):
+    if not isinstance(data, pd.DataFrame):
         return {
             "status": "error",
             "message": "Failed to parse the PDF file",
             "data": [],
         }
 
-    print(parsed_data.head())
+    data["txn_seq"] = (
+        data.groupby(["client_pan", "folio", "isin", "date"]).cumcount() + 1
+    )
+
+    data["transaction_id"] = data.apply(
+        lambda row: f"{row['date'].strftime('%Y%m%d')}-{row['txn_seq']}", axis=1
+    )
+    data["price"] = data.apply(
+        lambda row: row["trade_value"] / row["units"] if row["units"] != 0 else 0,
+        axis=1,
+    )
+
+    data["portfolio"] = "Mutual Fund"
+    data["asset_class"] = "Mutual Fund"
+
+    data = data.rename(
+        columns={
+            "client_pan": "client_pan",
+            "isin": "instrument",
+            "folio": "folio",
+            "fund_name": "instrument_name",
+            "amc": "amc",
+            "trade_type": "trade_type",
+            "transaction_id": "transaction_id",
+            "date": "trade_date",
+            "units": "quantity",
+            "trade_value": "value",
+            "price": "price",
+        }
+    )
+
+    data = data[
+        [
+            "client_pan",
+            "portfolio",
+            "asset_class",
+            "folio",
+            "instrument",
+            "instrument_name",
+            "trade_type",
+            "transaction_id",
+            "trade_date",
+            "quantity",
+            "price",
+            "value",
+        ]
+    ]
+
+    data.to_clipboard(index=False)  # For debugging: copy output to clipboard
     return {
         "status": "success",
         "message": "File uploaded successfully",
         "data": {
             "pan": client_pan,
+            "transactions": data.to_dict(orient="records"),
         },
     }
 
@@ -192,7 +241,7 @@ def parse_cams_data(file_content: bytes, pan: str | None = None):
 
     # Date and derived columns
     df["date"] = pd.to_datetime(df["date"], format="%d-%b-%Y")
-    df["trade_type"] = df["units"].apply(lambda x: "IN" if x > 0 else "OUT")
+    df["trade_type"] = df["units"].apply(lambda x: "buy" if x > 0 else "sell")
     df["client_pan"] = pan
 
     # Clean folio - remove "Folio No:" prefix and ALL whitespace including middle
@@ -225,5 +274,4 @@ def parse_cams_data(file_content: bytes, pan: str | None = None):
         ]
     ]
 
-    output.to_clipboard(index=False)
     return output

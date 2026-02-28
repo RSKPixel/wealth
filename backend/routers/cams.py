@@ -11,19 +11,14 @@ router = APIRouter()
 ALLOWED_FILE_TYPES = ["application/pdf"]
 
 
-# make pan optional
 @router.post("/upload")
-async def get_cams_data(file: UploadFile = Form(...), client_pan: str = Form(None)):
+async def get_cams_data(file: UploadFile = Form(...), client_pan: str = Form(...)):
     file_content = await file.read()
 
-    file_size = round(len(file_content) / 1024, 2)
-    file_name = file.filename
-    file_type = file.content_type
-
-    if file_type not in ALLOWED_FILE_TYPES:
+    if file.content_type not in ALLOWED_FILE_TYPES:
         return {
             "status": "error",
-            "message": f"Unsupported file type. Only PDF files are allowed. but received {file_type}",
+            "message": f"Unsupported file type. Only PDF files are allowed. but received {file.content_type}",
             "data": [],
         }
 

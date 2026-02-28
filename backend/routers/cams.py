@@ -3,20 +3,17 @@ import requests
 import pdfplumber
 import re
 import pandas as pd
-import os
 import io
-from pathlib import Path
+from core.dependencies import engine, NAV_FILE_PATH
 
 router = APIRouter()
 
 ALLOWED_FILE_TYPES = ["application/pdf"]
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NAV_FILE_PATH = Path(BASE_DIR) / "data" / "NAVOpen.txt"
 
 
 # make pan optional
 @router.post("/upload")
-async def get_cams_data(file: UploadFile = Form(...), pan: str = Form(None)):
+async def get_cams_data(file: UploadFile = Form(...), client_pan: str = Form(None)):
     file_content = await file.read()
 
     file_size = round(len(file_content) / 1024, 2)
@@ -30,15 +27,29 @@ async def get_cams_data(file: UploadFile = Form(...), pan: str = Form(None)):
             "data": [],
         }
 
-    parsed_data = parse_cams_data(file_content, pan)
+    parsed_data = parse_cams_data(file_content, client_pan)
 
+    if not isinstance(parsed_data, pd.DataFrame):
+        return {
+            "status": "error",
+            "message": "Failed to parse the PDF file",
+            "data": [],
+        }
+
+    print(parsed_data.head())
     return {
         "status": "success",
         "message": "File uploaded successfully",
         "data": {
-            "pan": pan,
+            "pan": client_pan,
         },
     }
+
+
+def update_database(data: pd.DataFrame):
+    # Placeholder for database update logic
+    # You can use SQLAlchemy or any database connector to insert data into your database
+    pass
 
 
 def _clean_numeric_series(series: pd.Series, round_decimals: int = None) -> pd.Series:
@@ -220,4 +231,4 @@ def parse_cams_data(file_content: bytes, pan: str | None = None):
     ]
 
     output.to_clipboard(index=False)
-    return {"status": "success", "message": "File parsed successfully", "data": {}}
+    return output

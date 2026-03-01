@@ -18,7 +18,7 @@ def mf_eod():
 
 def amfi_eod():
 
-    sql = text("SELECT distinct(instrument) FROM wealth_transactions")
+    sql = text("SELECT distinct(instrument) FROM transactions")
 
     with engine.connect() as connection:
         result = connection.execute(sql)

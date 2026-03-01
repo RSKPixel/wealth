@@ -1,18 +1,18 @@
 from fastapi import APIRouter
 from sqlalchemy import text
-from core.dependencies import engine, wealth_transactions
+from core.dependencies import engine, transactions
 import pandas as pd
 
 router = APIRouter()
 
 
-@router.get("/holdings")
+@router.post("/holdings")
 def holdings(client_pan: str):
 
     query = text(
         """
         SELECT instrument, instrument_name, folio, sum(quantity) as holding_quantity
-        FROM wealth_transactions
+        FROM transactions
         WHERE client_pan = :client_pan
         GROUP BY instrument, instrument_name, folio
         HAVING sum(quantity) > 0

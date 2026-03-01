@@ -29,5 +29,5 @@ engine = create_engine(
 )
 
 metadata = MetaData()
-wealth_transactions = Table("wealth_transactions", metadata, autoload_with=engine)
+transactions = Table("transactions", metadata, autoload_with=engine)
 mutualfund_eod = Table("mutualfund_eod", metadata, autoload_with=engine)

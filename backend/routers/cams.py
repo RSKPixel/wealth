@@ -5,8 +5,9 @@ import re
 import pandas as pd
 import io
 from core.dependencies import engine, NAV_FILE_PATH
-from core.dependencies import wealth_transactions
+from core.dependencies import transactions
 from sqlalchemy.dialects.postgresql import insert
+from sqlalchemy import text
 from sqlalchemy.orm import sessionmaker
 from typing import Optional
 
@@ -58,7 +59,7 @@ def update_database(data: pd.DataFrame):
     records = data.to_dict(orient="records")
 
     with session.begin():
-        stmt = insert(wealth_transactions).values(records)
+        stmt = insert(transactions).values(records)
 
         stmt = stmt.on_conflict_do_update(
             index_elements=[
@@ -84,6 +85,11 @@ def update_database(data: pd.DataFrame):
         )
 
         session.execute(stmt)
+
+    folios = data[["folio", "instrument", "client_pan"]].drop_duplicates()
+
+    for _, row in folios.iterrows():
+        fifo(row["folio"], row["instrument"], row["client_pan"])
     pass
 
 
@@ -283,3 +289,95 @@ def search_isin(isin, amfi_data):
                 return amc_name, fund_name, nav
 
     return None, None, None
+
+
+def fifo(folio: str, instrument: str, client_pan: str):
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    sql = text(
+        """
+        UPDATE
+            transactions SET balance_quantity = quantity
+        WHERE
+            folio = :folio AND
+            instrument = :instrument AND
+            client_pan = :client_pan AND
+            transaction_type = 'buy'
+        """
+    )
+    session.execute(
+        sql, {"folio": folio, "instrument": instrument, "client_pan": client_pan}
+    )
+
+    sql = text(
+        """
+        SELECT * FROM transactions
+        WHERE
+            folio = :folio AND
+            instrument = :instrument AND
+            client_pan = :client_pan
+        ORDER BY transaction_date
+        """
+    )
+    result = session.execute(
+        sql, {"folio": folio, "instrument": instrument, "client_pan": client_pan}
+    )
+    df = pd.DataFrame(result.fetchall(), columns=result.keys())
+
+    for index, row in df.iterrows():
+        if row["quantity"] < 0:
+            sell_units = abs(row["quantity"])
+
+            for x in range(index):
+                if sell_units == 0:
+                    break
+
+                if df.at[x, "balance_quantity"] == 0:
+                    continue
+
+                if df.at[x, "balance_quantity"] >= sell_units:
+                    df.at[x, "balance_quantity"] = round(
+                        df.at[x, "balance_quantity"] - sell_units, 3
+                    )
+                    sell_units = 0
+                else:
+                    sell_units = round(sell_units - df.at[x, "balance_quantity"], 3)
+                    df.at[x, "balance_quantity"] = 0
+
+            if sell_units == 0:
+                df.at[index, "balance_quantity"] = 0
+            else:
+                print(
+                    instrument,
+                    folio,
+                    client_pan,
+                    "Error: Not enough units to sell",
+                    row["quantity"],
+                )
+
+    df["holding_value"] = df["balance_quantity"] * df["price"]
+
+    if instrument == "INF179K01WA6":
+        df.to_clipboard(index=False)
+
+    # update table
+
+    for index, row in df.iterrows():
+        sql = text(
+            """
+            UPDATE transactions
+            SET balance_quantity = :balance_quantity, holding_value = :holding_value
+            WHERE transaction_id = :transaction_id
+            """
+        )
+        session.execute(
+            sql,
+            {
+                "balance_quantity": row["balance_quantity"],
+                "holding_value": row["holding_value"],
+                "transaction_id": row["transaction_id"],
+            },
+        )
+    session.commit()
+    session.close()

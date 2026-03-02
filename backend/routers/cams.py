@@ -359,28 +359,35 @@ def fifo(folio: str, instrument: str, client_pan: str):
 
     df["holding_value"] = df["balance_quantity"] * df["price"]
 
-    if instrument == "INF179K01WA6":
+    if instrument == "INF879O01027":
         df.to_clipboard(index=False)
 
     # update table
 
     for index, row in df.iterrows():
+        parms = {
+            "balance_quantity": row["balance_quantity"],
+            "holding_value": row["holding_value"],
+            "instrument": row["instrument"],
+            "folio": row["folio"],
+            "client_pan": row["client_pan"],
+            "transaction_id": row["transaction_id"],
+        }
         sql = text(
             """
-            UPDATE transactions
-            SET balance_quantity = :balance_quantity, holding_value = :holding_value
-            WHERE instrument = :instrument AND folio = :folio AND client_pan = :client_pan
+            UPDATE
+                transactions
+            SET
+                balance_quantity = :balance_quantity,
+                holding_value = :holding_value
+            WHERE
+                instrument = :instrument AND
+                folio = :folio AND
+                client_pan = :client_pan AND
+                transaction_id = :transaction_id
             """
         )
-        session.execute(
-            sql,
-            {
-                "balance_quantity": row["balance_quantity"],
-                "holding_value": row["holding_value"],
-                "instrument": row["instrument"],
-                "folio": row["folio"],
-                "client_pan": row["client_pan"],
-            },
-        )
+        session.execute(sql, parms)
+
     session.commit()
     session.close()

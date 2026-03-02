@@ -295,6 +295,8 @@ def fifo(folio: str, instrument: str, client_pan: str):
     Session = sessionmaker(bind=engine)
     session = Session()
 
+    print(folio, instrument, client_pan)
+
     sql = text(
         """
         UPDATE
@@ -302,8 +304,7 @@ def fifo(folio: str, instrument: str, client_pan: str):
         WHERE
             folio = :folio AND
             instrument = :instrument AND
-            client_pan = :client_pan AND
-            transaction_type = 'buy'
+            client_pan = :client_pan
         """
     )
     session.execute(
@@ -317,7 +318,7 @@ def fifo(folio: str, instrument: str, client_pan: str):
             folio = :folio AND
             instrument = :instrument AND
             client_pan = :client_pan
-        ORDER BY transaction_date
+        ORDER BY transaction_id ASC
         """
     )
     result = session.execute(
@@ -368,7 +369,7 @@ def fifo(folio: str, instrument: str, client_pan: str):
             """
             UPDATE transactions
             SET balance_quantity = :balance_quantity, holding_value = :holding_value
-            WHERE transaction_id = :transaction_id
+            WHERE instrument = :instrument AND folio = :folio AND client_pan = :client_pan
             """
         )
         session.execute(
@@ -376,7 +377,9 @@ def fifo(folio: str, instrument: str, client_pan: str):
             {
                 "balance_quantity": row["balance_quantity"],
                 "holding_value": row["holding_value"],
-                "transaction_id": row["transaction_id"],
+                "instrument": row["instrument"],
+                "folio": row["folio"],
+                "client_pan": row["client_pan"],
             },
         )
     session.commit()

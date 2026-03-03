@@ -2,6 +2,10 @@ from fastapi import APIRouter, Form
 from sqlalchemy import text
 from core.dependencies import engine, transactions
 import pandas as pd
+from scipy.optimize import newton
+from scipy.optimize import brentq
+from datetime import datetime
+from decimal import Decimal
 
 router = APIRouter()
 
@@ -72,8 +76,16 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
     df["current_value"] = df["holding_quantity"] * df["current_price"]
     df["pl"] = round(df["current_value"] - df["holding_value"], 2)
     df["plp"] = round((df["pl"] / df["holding_value"]) * 100, 2)
-    df["xirr"] = 0  # Placeholder for XIRR calculation
+
+    df["xirr"] = df.apply(
+        lambda row: calc_xirr(
+            row["client_pan"], row["instrument"], row["folio"], row["current_value"]
+        ),
+        axis=1,
+    )
     df["cagr"] = 0  # Placeholder for CAGR calculation
+
+    df.to_clipboard(index=False)
 
     if portfolio != "All":
         df = df[df["portfolio"] == portfolio]
@@ -83,3 +95,66 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
         "message": "Mutual fund holdings fetched successfully",
         "data": df.to_dict(orient="records"),
     }
+
+
+def calc_xirr(client_pan: str, instrument: str, folio: str, current_value: float):
+    sql = text(
+        """
+        SELECT
+            transaction_date, holding_value
+        FROM transactions
+        WHERE
+            client_pan = :client_pan AND
+            instrument = :instrument AND
+            folio = :folio AND
+            balance_quantity > 0
+        ORDER BY transaction_date
+        """
+    )
+    with engine.connect() as connection:
+        params = {"client_pan": client_pan, "instrument": instrument, "folio": folio}
+        transactions = pd.read_sql(sql, connection, params=params)
+        cashflows = []
+        dates = []
+
+    for row in transactions.itertuples():
+        cashflows.append(-float(row.holding_value))
+        dates.append(row.transaction_date)
+    # Add current value as the final cashflow
+    cashflows.append(float(current_value))
+    dates.append(datetime.now().date())
+
+    xirr_value = xirr(cashflows, dates)
+    return round(xirr_value * 100, 2) if xirr_value is not None else None
+
+
+def xirr(cashflows, dates):
+    """Compute XIRR using Brent’s method for stability."""
+
+    if len(set(dates)) == 1:  # All dates are the same, invalid for XIRR
+        return None
+    # Must have inflow & outflow
+    if not (any(cf < 0 for cf in cashflows) and any(cf > 0 for cf in cashflows)):
+        return None
+
+    # Convert cashflows to Decimal for precision
+    cashflows = [Decimal(cf) for cf in cashflows]
+
+    # Ensure dates are datetime objects
+    # dates = [
+    #     d if isinstance(d, datetime) else datetime.strptime(d, "%Y-%m-%d")
+    #     for d in dates
+    # ]
+
+    def npv(rate):
+        """Net Present Value function used in Brent’s method."""
+        return sum(
+            float(cf) / ((1 + rate) ** ((d - dates[0]).days / 365.0))
+            for cf, d in zip(cashflows, dates)
+        )
+
+    try:
+        # Search for the root in a wide range
+        return brentq(npv, -0.9999, 100.0)
+    except ValueError:
+        return None  # No valid root found

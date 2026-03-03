@@ -6,3 +6,4 @@ pandas
 requests
 sqlalchemy
 psycopg2-binary
+scipy

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Path
 import os
 import requests
-from core.dependencies import BASE_DIR, url, mutualfund_eod, engine
+from core.dependencies import BASE_DIR, url, eod, engine
 import pandas as pd
 from sqlalchemy import text
 from sqlalchemy.orm import sessionmaker
@@ -156,7 +156,7 @@ def amfi_eod():
         for _, row in df.iterrows():
             insert_query = text(
                 """
-                INSERT INTO mutualfund_eod (
+                INSERT INTO eod (
                     date, scheme_code, scheme_name, amc_code, amc_name, isin, nav, asset_class, scheme_type
                 ) VALUES (
                     :date, :scheme_code, :scheme_name, :amc_code, :amc_name, :isin_1, :nav, :asset_class, :scheme_type

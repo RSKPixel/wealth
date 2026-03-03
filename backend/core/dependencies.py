@@ -30,4 +30,4 @@ engine = create_engine(
 
 metadata = MetaData()
 transactions = Table("transactions", metadata, autoload_with=engine)
-mutualfund_eod = Table("mutualfund_eod", metadata, autoload_with=engine)
+eod = Table("eod", metadata, autoload_with=engine)

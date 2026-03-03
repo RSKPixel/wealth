@@ -37,21 +37,3 @@ def holdings(client_pan: str = Form(...)):
         "message": "Mutual fund holdings fetched successfully",
         "data": df.to_dict(orient="records"),
     }
-
-CREATE TABLE holdings (
-    id                 SERIAL PRIMARY KEY,
-    client_pan         VARCHAR(10)     NOT NULL,
-    instrument         VARCHAR(20)     NOT NULL,
-    instrument_name    VARCHAR(255)    NOT NULL,
-    folio              VARCHAR(50)     NOT NULL,
-    holding_quantity   NUMERIC(15, 3) NOT NULL,
-    holding_value      NUMERIC(15, 2)  NOT NULL,
-    avg_price          NUMERIC(15, 2)  NOT NULL,
-    latest_price       NUMERIC(15, 2),
-    current_value      NUMERIC(15, 2),
-    value_date         DATE,
-    pl                 NUMERIC(15, 2),
-    plp                NUMERIC(5, 2),
-    xirr               NUMERIC(5, 2),
-    cagr               NUMERIC(5, 2),
-);

@@ -4,6 +4,7 @@ import requests
 from core.dependencies import BASE_DIR, url, mutualfund_eod, engine
 import pandas as pd
 from sqlalchemy import text
+from sqlalchemy.orm import sessionmaker
 
 router = APIRouter()
 
@@ -147,6 +148,34 @@ def amfi_eod():
         ]
 
         df = df[df["isin_1"].isin(instruments)]
+
+        # save to table
+        Session = sessionmaker(bind=engine)
+        session = Session()
+
+        for _, row in df.iterrows():
+            insert_query = text(
+                """
+                INSERT INTO mutualfund_eod (
+                    date, scheme_code, scheme_name, amc_code, amc_name, isin, nav, asset_class, scheme_type
+                ) VALUES (
+                    :date, :scheme_code, :scheme_name, :amc_code, :amc_name, :isin_1, :nav, :asset_class, :scheme_type
+                )
+                ON CONFLICT (date, isin) DO UPDATE SET
+                    scheme_name = EXCLUDED.scheme_name,
+                    amc_code = EXCLUDED.amc_code,
+                    amc_name = EXCLUDED.amc_name,
+                    isin = EXCLUDED.isin,
+                    nav = EXCLUDED.nav,
+                    asset_class = EXCLUDED.asset_class,
+                    scheme_type = EXCLUDED.scheme_type;
+                """
+            )
+            session.execute(insert_query, row.to_dict())
+
+        session.commit()
+        session.close()
+
         df.to_csv(nav_amfi_csv, index=False)
 
     except Exception as e:

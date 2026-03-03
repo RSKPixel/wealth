@@ -13,17 +13,33 @@ def holdings(client_pan: str = Form(...)):
         """
         SELECT
             client_pan, instrument, instrument_name, folio,
-            sum(balance_quantity) as holding_quantity,
-            sum(holding_value) as holding_value,
-            round(sum(holding_value) / sum(balance_quantity), 2) as avg_price
-        FROM
-            transactions
-        WHERE
-            client_pan = :client_pan
-        GROUP BY
-            client_pan, instrument, instrument_name, folio
-        HAVING
-            sum(balance_quantity) > 0
+
+            -- Total
+            SUM(balance_quantity) AS holding_quantity,
+            SUM(holding_value) AS holding_value,
+            ROUND(SUM(holding_value) / NULLIF(SUM(balance_quantity), 0), 2) AS avg_price,
+            mutualfund_eod.nav as current_price,
+
+            /* ========== LONG TERM ========== */
+            SUM(CASE WHEN CURRENT_DATE - transaction_date > 365 THEN balance_quantity ELSE 0 END) AS long_term_quantity,
+            SUM(CASE WHEN CURRENT_DATE - transaction_date > 365 THEN holding_value ELSE 0 END) AS long_term_value,
+            CAST(SUM(CASE WHEN CURRENT_DATE - transaction_date > 365 THEN balance_quantity ELSE 0 END) * mutualfund_eod.nav as NUMERIC(14,2)) as long_term_cv,
+
+            /* ========== SHORT TERM ========== */
+            SUM(CASE WHEN CURRENT_DATE - transaction_date < 365 THEN balance_quantity ELSE 0 END) AS short_term_quantity,
+            SUM(CASE WHEN CURRENT_DATE - transaction_date < 365 THEN holding_value ELSE 0 END) AS short_term_value,
+            CAST(SUM(CASE WHEN CURRENT_DATE - transaction_date < 365 THEN balance_quantity ELSE 0 END) * mutualfund_eod.nav as NUMERIC(14,2)) as short_term_cv
+
+            FROM
+                transactions
+            INNER JOIN
+                mutualfund_eod
+            ON transactions.instrument =  mutualfund_eod.isin
+            WHERE
+                client_pan = :client_pan
+            GROUP BY
+                client_pan, instrument, instrument_name, folio, mutualfund_eod.nav
+            HAVING SUM(balance_quantity) > 0;
         """
     )
 

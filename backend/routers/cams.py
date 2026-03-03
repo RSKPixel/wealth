@@ -295,8 +295,6 @@ def fifo(folio: str, instrument: str, client_pan: str):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    print(folio, instrument, client_pan)
-
     sql = text(
         """
         UPDATE

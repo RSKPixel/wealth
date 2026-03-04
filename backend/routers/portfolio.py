@@ -6,6 +6,7 @@ from scipy.optimize import newton
 from scipy.optimize import brentq
 from datetime import datetime
 from decimal import Decimal
+from sqlalchemy.orm import sessionmaker
 
 router = APIRouter()
 
@@ -23,6 +24,7 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
             CAST(SUM(holding_value) AS numeric(14,2)) AS holding_value,
             ROUND(SUM(holding_value) / NULLIF(SUM(balance_quantity), 0), 2) AS avg_price,
             CAST(eod.current_price AS numeric(14,2)) as current_price,
+            eod.date as current_price_date,
 
             /* ========== LONG TERM ========== */
             CAST(SUM(CASE WHEN CURRENT_DATE - transaction_date > 365 THEN balance_quantity ELSE 0 END) AS numeric(14,2)) AS long_term_quantity,
@@ -42,7 +44,7 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
             WHERE
                 client_pan = :client_pan
             GROUP BY
-                client_pan, portfolio, transactions.instrument, transactions.instrument_name, folio, eod.current_price
+                client_pan, portfolio, transactions.instrument, transactions.instrument_name, folio, eod.current_price, eod.date
             HAVING SUM(balance_quantity) > 0;
         """
     )
@@ -52,6 +54,21 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
         result = connection.execute(query, parms)
         df = pd.DataFrame(result.fetchall(), columns=result.keys())
 
+    numeric_cols = [
+        "holding_quantity",
+        "holding_value",
+        "avg_price",
+        "current_price",
+        "long_term_quantity",
+        "long_term_value",
+        "long_term_current_value",
+        "short_term_quantity",
+        "short_term_value",
+        "short_term_current_value",
+    ]
+    for col in numeric_cols:
+        df[col] = pd.to_numeric(df[col], errors="coerce")
+
     df["long_term_price"] = df.apply(
         lambda row: (
             round(row["long_term_value"] / row["long_term_quantity"], 2)
@@ -60,7 +77,7 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
         ),
         axis=1,
     )
-    df["long_term_pl"] = round(df["long_term_current_value"] - df["long_term_value"], 2)
+    df["long_term_pl"] = df["long_term_current_value"] - df["long_term_value"]
     df["short_term_price"] = df.apply(
         lambda row: (
             round(row["short_term_value"] / row["short_term_quantity"], 2)
@@ -74,6 +91,7 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
     )
 
     df["current_value"] = df["holding_quantity"] * df["current_price"]
+
     df["pl"] = round(df["current_value"] - df["holding_value"], 2)
     df["plp"] = round((df["pl"] / df["holding_value"]) * 100, 2)
 
@@ -85,10 +103,57 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
     )
     df["cagr"] = 0  # Placeholder for CAGR calculation
 
-    df.to_clipboard(index=False)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    for _, row in df.iterrows():
+        sql = text(
+            """
+            INSERT INTO portfolio (
+                client_pan, portfolio, instrument, instrument_name, folio,
+                holding_quantity, holding_value, avg_price, current_price, current_price_date,
+                long_term_quantity, long_term_value, long_term_current_value,
+                short_term_quantity, short_term_value, short_term_current_value,
+                long_term_price, long_term_pl, short_term_price, short_term_pl,
+                current_value, pl, plp, xirr, cagr
+            ) VALUES (
+                :client_pan, :portfolio, :instrument, :instrument_name, :folio,
+                :holding_quantity, :holding_value, :avg_price, :current_price, :current_price_date,
+                :long_term_quantity, :long_term_value, :long_term_current_value,
+                :short_term_quantity, :short_term_value, :short_term_current_value,
+                :long_term_price, :long_term_pl, :short_term_price, :short_term_pl,
+                :current_value, :pl, :plp, :xirr, :cagr
+            )
+            ON CONFLICT (client_pan, folio, instrument) DO UPDATE SET
+                holding_quantity = EXCLUDED.holding_quantity,
+                holding_value = EXCLUDED.holding_value,
+                avg_price = EXCLUDED.avg_price,
+                current_price = EXCLUDED.current_price,
+                current_price_date = EXCLUDED.current_price_date,
+                long_term_quantity = EXCLUDED.long_term_quantity,
+                long_term_value = EXCLUDED.long_term_value,
+                long_term_current_value = EXCLUDED.long_term_current_value,
+                short_term_quantity = EXCLUDED.short_term_quantity,
+                short_term_value = EXCLUDED.short_term_value,
+                short_term_current_value = EXCLUDED.short_term_current_value,
+                long_term_price = EXCLUDED.long_term_price,
+                long_term_pl = EXCLUDED.long_term_pl,
+                short_term_price = EXCLUDED.short_term_price,
+                short_term_pl = EXCLUDED.short_term_pl,
+                current_value = EXCLUDED.current_value,
+                pl = EXCLUDED.pl,
+                plp = EXCLUDED.plp,
+                xirr = EXCLUDED.xirr,
+                cagr = EXCLUDED.cagr
+            """
+        )
+        session.execute(sql, row.to_dict())
+    session.commit()
 
     if portfolio != "All":
         df = df[df["portfolio"] == portfolio]
+
+    df.sort_values(by="current_value", ascending=False, inplace=True)
 
     return {
         "status": "success",

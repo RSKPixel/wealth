@@ -154,12 +154,41 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
         df = df[df["portfolio"] == portfolio]
 
     df.sort_values(by="current_value", ascending=False, inplace=True)
+    summary = portfolio_summary(client_pan, portfolio)
 
     return {
         "status": "success",
         "message": "Mutual fund holdings fetched successfully",
-        "data": df.to_dict(orient="records"),
+        "data": {"holdings": df.to_dict(orient="records"), "summary": summary},
     }
+
+
+def portfolio_summary(client_pan: str = Form(...), portfolio: str = Form(...)):
+    summary = {}
+
+    sql = text(
+        """
+            SELECT
+                CAST(SUM(holding_value) as numeric(14,2)) as holding_value,
+                CAST(SUM(current_value) as numeric(14,2)) as current_value
+            FROM
+                portfolio
+            WHERE client_pan = :client_pan
+        """
+    )
+
+    with engine.connect() as connection:
+        params = {"client_pan": client_pan}
+        result = connection.execute(sql, params)
+        summary = pd.DataFrame(result.fetchall(), columns=result.keys()).to_dict(
+            orient="records"
+        )[0]
+
+    summary["pl"] = round(summary["current_value"] - summary["holding_value"], 2)
+    summary["plp"] = round((summary["pl"] / summary["holding_value"]) * 100, 2)
+    summary["xirr"] = calc_xirr(client_pan, None, None, summary["current_value"])
+
+    return summary
 
 
 def calc_xirr(client_pan: str, instrument: str, folio: str, current_value: float):
@@ -176,6 +205,20 @@ def calc_xirr(client_pan: str, instrument: str, folio: str, current_value: float
         ORDER BY transaction_date
         """
     )
+
+    if instrument is None and folio is None:
+        sql = text(
+            """
+            SELECT
+                transaction_date, holding_value
+            FROM transactions
+            WHERE
+                client_pan = :client_pan AND
+                balance_quantity > 0
+            ORDER BY transaction_date
+            """
+        )
+
     with engine.connect() as connection:
         params = {"client_pan": client_pan, "instrument": instrument, "folio": folio}
         transactions = pd.read_sql(sql, connection, params=params)

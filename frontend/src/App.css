@@ -3,10 +3,20 @@
 :root {
   font-size: 14px;
 }
+
 body {
-  @apply bg-neutral-900 text-white;
+  @apply text-white;
+  background: radial-gradient(circle at top, #271a3d, #020617);
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("assets/topography.svg") repeat;
+  opacity: 0.035;
+  pointer-events: none;
+}
 /* Firefox */
 * {
   scrollbar-width: thin;

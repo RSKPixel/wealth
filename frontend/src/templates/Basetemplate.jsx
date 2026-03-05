@@ -1,6 +1,7 @@
 import React, { Children, useContext } from "react";
 import { Link } from "react-router-dom";
 import GlobalContext from "./GlobalContext";
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 
 const Basetemplate = ({ children }) => {
   const { api, selectedMenuItem, loggedIn } = useContext(GlobalContext);
@@ -13,12 +14,12 @@ const Basetemplate = ({ children }) => {
   ];
   return (
     <div className="flex flex-col text-sm tracking-wide uppercase h-screen">
-      <nav className="bg-teal-950 border-b border-teal-600 px-4 py-3 w-full shrink-0 ">
+      <nav className="bg-cyan-950 border-b border-cyan-600 px-4 py-3 w-full shrink-0 ">
         <div className="flex flex-row mx-auto justify-between items-center">
           <div className="font-bold text-white cursor-pointer">Wealth Framework</div>
           <div className="flex flex-row gap-4">
             {menuItems.map((item) => (
-              <Link key={item.name} to={item.link} className={`font-bold hover:text-red-500 underline-offset-4 ${selectedMenuItem == item.name ? "underline text-red-500" : "text-white"}`}>
+              <Link key={item.name} to={item.link} className={`font-bold hover:text-red-400 underline-offset-4 ${selectedMenuItem == item.name ? "underline text-red-400" : "text-white"}`}>
                 {item.name}
               </Link>
             ))}

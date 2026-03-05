@@ -9,13 +9,13 @@ import MutualFunds from "./pages/MutualFunds";
 
 function App() {
   const api = import.meta.env.VITE_API;
-  const client_id = "WI0911";
+  const client_pan = "ARTPS2520D";
   const [selectedMenuItem, setSelectedMenuItem] = useState("dashboard");
   const [loggedIn, setLoggedIn] = useState(true);
 
   const globalContextValue = {
     api,
-    client_id,
+    client_pan,
     setLoggedIn,
     loggedIn,
     setSelectedMenuItem,

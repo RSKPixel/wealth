@@ -97,6 +97,7 @@ def amfi_eod():
         df["nav_date"] = pd.to_datetime(df["nav_date"], format="%d-%b-%Y").dt.strftime(
             "%Y-%m-%d"
         )
+
         df["nav"] = df["nav"].replace("N.A.", 0)
         df["amc_code"] = df["amc_code"].astype("Int64")
         df["scheme_code"] = df["scheme_code"].astype(str)
@@ -157,18 +158,13 @@ def amfi_eod():
             insert_query = text(
                 """
                 INSERT INTO eod (
-                    date, scheme_code, scheme_name, amc_code, amc_name, isin, nav, asset_class, scheme_type
+                    date, scheme_code, instrument_name, amc_code, amc_name, instrument, current_price, asset_class, scheme_type
                 ) VALUES (
                     :date, :scheme_code, :scheme_name, :amc_code, :amc_name, :isin_1, :nav, :asset_class, :scheme_type
                 )
-                ON CONFLICT (date, isin) DO UPDATE SET
-                    scheme_name = EXCLUDED.scheme_name,
-                    amc_code = EXCLUDED.amc_code,
-                    amc_name = EXCLUDED.amc_name,
-                    isin = EXCLUDED.isin,
-                    nav = EXCLUDED.nav,
-                    asset_class = EXCLUDED.asset_class,
-                    scheme_type = EXCLUDED.scheme_type;
+                ON CONFLICT (instrument) DO UPDATE SET
+                    date = EXCLUDED.date,
+                    current_price = EXCLUDED.current_price
                 """
             )
             session.execute(insert_query, row.to_dict())

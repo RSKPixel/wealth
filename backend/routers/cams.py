@@ -357,9 +357,6 @@ def fifo(folio: str, instrument: str, client_pan: str):
 
     df["holding_value"] = df["balance_quantity"] * df["price"]
 
-    if instrument == "INF879O01027":
-        df.to_clipboard(index=False)
-
     # update table
 
     for index, row in df.iterrows():

@@ -40,7 +40,8 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
                 transactions
             INNER JOIN
                 eod
-            ON transactions.instrument =  eod.instrument
+            ON
+                transactions.instrument = eod.instrument
             WHERE
                 client_pan = :client_pan
             GROUP BY

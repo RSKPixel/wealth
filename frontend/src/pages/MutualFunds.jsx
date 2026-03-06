@@ -108,7 +108,7 @@ const MutualFunds = () => {
         <div className="grid grid-cols-3 gap-4 pe-4">
           {holdings.map((holding, index) => (
             <div key={index} className="grid grid-cols-[2.5fr_1fr]  bg-cyan-950/60 hover:bg-cyan-900 border-cyan-800 border px-4 cursor-pointer py-4 rounded-lg shadow">
-              <span className="text-start text-base overflow-hidden whitespace-nowrap text-ellipsis">{holding.instrument_name}</span>
+              <span className="text-start text-sm overflow-hidden whitespace-nowrap text-ellipsis">{holding.instrument_name}</span>
               <span className={`text-end ${holding.pl < 0 && "text-red-400"} font-bold`}>
                 {numeral(holding.pl).format("0,0.00")} ({numeral(holding.plp).format("0.00")}%)
               </span>

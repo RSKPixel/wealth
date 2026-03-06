@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import "./App.css";
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import GlobalContext from "./templates/GlobalContext";
 import Basetemplate from "./templates/Basetemplate";
 import Dashboard from "./pages/Dashboard";

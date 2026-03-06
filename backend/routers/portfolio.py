@@ -103,6 +103,9 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
         ),
         axis=1,
     )
+    df["fv_5y"] = round(df["current_value"] * ((1 + (df["xirr"] / 100)) ** 5), 2)
+    df["fv_10y"] = round(df["current_value"] * ((1 + (df["xirr"] / 100)) ** 10), 2)
+    df["fv_15y"] = round(df["current_value"] * ((1 + (df["xirr"] / 100)) ** 15), 2)
     df["cagr"] = 0  # Placeholder for CAGR calculation
 
     Session = sessionmaker(bind=engine)
@@ -155,7 +158,7 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
 
     if portfolio != "All":
         df = df[df["portfolio"] == portfolio]
-
+    df.to_clipboard(index=False)
     df.sort_values(by="current_value", ascending=False, inplace=True)
     summary = portfolio_summary(client_pan, portfolio)
 
@@ -187,9 +190,22 @@ def portfolio_summary(client_pan: str = Form(...), portfolio: str = Form(...)):
             orient="records"
         )[0]
 
+    numeric_cols = ["holding_value", "current_value"]
+    for col in numeric_cols:
+        summary[col] = pd.to_numeric(summary[col], errors="coerce")
+
     summary["pl"] = round(summary["current_value"] - summary["holding_value"], 2)
     summary["plp"] = round((summary["pl"] / summary["holding_value"]) * 100, 2)
     summary["xirr"] = calc_xirr(client_pan, None, None, summary["current_value"])
+    summary["fv_5y"] = round(
+        summary["current_value"] * ((1 + (summary["xirr"] / 100)) ** 5), 0
+    )
+    summary["fv_10y"] = round(
+        summary["current_value"] * ((1 + (summary["xirr"] / 100)) ** 10), 0
+    )
+    summary["fv_15y"] = round(
+        summary["current_value"] * ((1 + (summary["xirr"] / 100)) ** 15), 0
+    )
 
     return summary
 

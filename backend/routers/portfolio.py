@@ -25,6 +25,7 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
             ROUND(SUM(holding_value) / NULLIF(SUM(balance_quantity), 0), 2) AS avg_price,
             CAST(eod.current_price AS numeric(14,2)) as current_price,
             eod.date as current_price_date,
+            eod.asset_class as asset_class,
 
             /* ========== LONG TERM ========== */
             CAST(SUM(CASE WHEN CURRENT_DATE - transaction_date > 365 THEN balance_quantity ELSE 0 END) AS numeric(14,2)) AS long_term_quantity,
@@ -45,7 +46,7 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
             WHERE
                 client_pan = :client_pan
             GROUP BY
-                client_pan, portfolio, transactions.instrument, transactions.instrument_name, folio, eod.current_price, eod.date
+                client_pan, portfolio, transactions.instrument, transactions.instrument_name, folio, eod.current_price, eod.date, eod.asset_class
             HAVING SUM(balance_quantity) > 0;
         """
     )
@@ -116,14 +117,14 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
                 long_term_quantity, long_term_value, long_term_current_value,
                 short_term_quantity, short_term_value, short_term_current_value,
                 long_term_price, long_term_pl, short_term_price, short_term_pl,
-                current_value, pl, plp, xirr, cagr
+                current_value, pl, plp, xirr, cagr, asset_class
             ) VALUES (
                 :client_pan, :portfolio, :instrument, :instrument_name, :folio,
                 :holding_quantity, :holding_value, :avg_price, :current_price, :current_price_date,
                 :long_term_quantity, :long_term_value, :long_term_current_value,
                 :short_term_quantity, :short_term_value, :short_term_current_value,
                 :long_term_price, :long_term_pl, :short_term_price, :short_term_pl,
-                :current_value, :pl, :plp, :xirr, :cagr
+                :current_value, :pl, :plp, :xirr, :cagr, :asset_class
             )
             ON CONFLICT (client_pan, folio, instrument) DO UPDATE SET
                 holding_quantity = EXCLUDED.holding_quantity,
@@ -145,7 +146,8 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
                 pl = EXCLUDED.pl,
                 plp = EXCLUDED.plp,
                 xirr = EXCLUDED.xirr,
-                cagr = EXCLUDED.cagr
+                cagr = EXCLUDED.cagr,
+                asset_class = excluded.asset_class
             """
         )
         session.execute(sql, row.to_dict())

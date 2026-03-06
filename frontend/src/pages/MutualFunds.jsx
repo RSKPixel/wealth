@@ -78,16 +78,22 @@ const MutualFunds = () => {
               <span className="text-start text-base overflow-hidden whitespace-nowrap text-ellipsis">
                 {holding.instrument_name}
               </span>
-              <span className="text-end font-bold text-base">
-                {numeral(holding.current_value).format("0,0.00")}
+              <span
+                className={`text-end ${holding.pl < 0 && "text-red-400"} font-bold`}
+              >
+                {numeral(holding.pl).format("0,0.00")} (
+                {numeral(holding.plp).format("0.00")}%)
               </span>
 
-              <div className=" col-span-2 grid grid-cols-3 mt-2 gap-y-1 text-sm">
+              <div className=" col-span-2 grid grid-cols-4 mt-2 gap-y-1 text-sm">
                 <span className="text-center text-orange-200 font-bold">
                   Invested
                 </span>
                 <span className="text-center text-orange-200 font-bold">
-                  Total P/L
+                  Current Value
+                </span>
+                <span className="text-center text-orange-200 font-bold">
+                  Asset Class
                 </span>
                 <span className="text-center text-orange-200 font-bold">
                   XIRR
@@ -95,12 +101,10 @@ const MutualFunds = () => {
                 <span className="text-center">
                   {numeral(holding.holding_value).format("0,0.00")}
                 </span>
-                <span
-                  className={`text-center ${holding.pl < 0 && "text-red-400"} font-bold`}
-                >
-                  {numeral(holding.pl).format("0,0.00")} (
-                  {numeral(holding.plp).format("0.00")}%)
+                <span className="text-center">
+                  {numeral(holding.current_value).format("0,0.00")}
                 </span>
+                <span className="text-center">{holding.asset_class}</span>
                 <span className="text-center">
                   {numeral(holding.xirr).format("0.00")}%
                 </span>

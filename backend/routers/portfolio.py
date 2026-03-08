@@ -78,6 +78,9 @@ def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
     progress.sort_values(by="date", inplace=True)
     progress["peak"] = progress["plp"].cummax()
     progress["drawdown"] = progress["plp"] - progress["peak"]
+    progress = progress.round(
+        {"invested_value": 2, "current_value": 2, "pl": 2, "plp": 2, "drawdown": 2}
+    )
     return {
         "status": "success",
         "message": "Portfolio progress fetched successfully",

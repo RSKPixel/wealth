@@ -69,10 +69,15 @@ def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
         )
         grouped["pl"] = round(grouped["current_value"] - grouped["invested_value"], 2)
         grouped["plp"] = round((grouped["pl"] / grouped["invested_value"]) * 100, 2)
-        progress = pd.concat([progress, grouped], ignore_index=True)
-        progress.sort_values(by="date", inplace=True)
-        progress.to_clipboard(index=False)
 
+        if progress.empty:
+            progress = grouped
+        else:
+            progress = pd.concat([progress, grouped], ignore_index=True)
+
+    progress.sort_values(by="date", inplace=True)
+    progress["peak"] = progress["plp"].cummax()
+    progress["drawdown"] = progress["plp"] - progress["peak"]
     return {
         "status": "success",
         "message": "Portfolio progress fetched successfully",

@@ -40,6 +40,7 @@ async def get_cams_data(file: UploadFile = Form(...), client_pan: str = Form(...
         }
 
     update_database(data)
+    data.to_clipboard(index=False)
 
     return {
         "status": "success",
@@ -80,6 +81,7 @@ def update_database(data: pd.DataFrame):
                     "value",
                     "quantity",
                     "price",
+                    "year_month",
                 ]
             },
         )
@@ -251,6 +253,7 @@ def camspdf_extraction(pdf_path, password=None, client_pan=None):
         lambda row: row["value"] / row["quantity"] if row["quantity"] != 0 else 0,
         axis=1,
     )
+    newdf["year_month"] = newdf["transaction_date"].dt.strftime("%Y-%m")
     newdf.drop(columns=["txn_seq"], inplace=True)
     return newdf
 

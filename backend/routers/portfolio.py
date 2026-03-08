@@ -11,6 +11,75 @@ from sqlalchemy.orm import sessionmaker
 router = APIRouter()
 
 
+@router.post("/portfolio-progress")
+def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
+
+    start_date = "2022-01-01"
+    end_date = datetime.now().date()
+    range = pd.date_range(
+        start=start_date, end=end_date + pd.offsets.MonthEnd(0), freq="ME"
+    )
+    progress = pd.DataFrame(
+        columns=["date", "invested_value", "current_value", "pl", "plp"]
+    )
+    for tdate in range:
+        sql = text(
+            f"""
+                SELECT
+                    transactions.instrument,
+                    transactions.instrument_name,
+                    CAST(SUM(holding_value) AS NUMERIC(14,2)) AS invested_value,
+                    CAST(SUM(balance_quantity) AS NUMERIC(14,2)) AS invested_quantity,
+                    CAST(historical.close_price AS NUMERIC(14,2)) AS close_price,
+                    CAST(historical.close_price * SUM(balance_quantity) AS NUMERIC(14,2)) AS current_value
+                FROM
+                    transactions
+                INNER JOIN
+                    historical
+                ON
+                    historical.date = '{tdate}' AND
+                    transactions.instrument = historical.instrument
+                WHERE
+                    transactions.transaction_date <= '{tdate}'
+                GROUP BY
+                    transactions.instrument,
+                    transactions.instrument_name,
+                    historical.close_price
+                HAVING SUM(balance_quantity) > 0
+            """
+        )
+        with engine.connect() as connection:
+            result = connection.execute(sql)
+            df = pd.DataFrame(result.fetchall(), columns=result.keys())
+
+        numeric_cols = [
+            "invested_value",
+            "invested_quantity",
+            "close_price",
+            "current_value",
+        ]
+        for col in numeric_cols:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+        df["date"] = tdate
+
+        grouped = (
+            df.groupby("date")
+            .agg({"invested_value": "sum", "current_value": "sum"})
+            .reset_index()
+        )
+        grouped["pl"] = round(grouped["current_value"] - grouped["invested_value"], 2)
+        grouped["plp"] = round((grouped["pl"] / grouped["invested_value"]) * 100, 2)
+        progress = pd.concat([progress, grouped], ignore_index=True)
+        progress.sort_values(by="date", inplace=True)
+        progress.to_clipboard(index=False)
+
+    return {
+        "status": "success",
+        "message": "Portfolio progress fetched successfully",
+        "data": progress.to_dict(orient="records"),
+    }
+
+
 @router.post("/portfolio")
 def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
 
@@ -158,7 +227,7 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
 
     if portfolio != "All":
         df = df[df["portfolio"] == portfolio]
-    df.to_clipboard(index=False)
+
     df.sort_values(by="current_value", ascending=False, inplace=True)
     summary = portfolio_summary(client_pan, portfolio)
 

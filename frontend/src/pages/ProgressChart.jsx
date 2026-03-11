@@ -29,11 +29,11 @@ const ProgressChart = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const charts = [
+    "Equity Curve",
     "Investment Progress",
     "Drawdown",
     "Holding %",
     "Returns %",
-    "Benchmark",
   ];
   const period = {
     "1M": 1,
@@ -45,7 +45,7 @@ const ProgressChart = () => {
     All: 999,
   };
 
-  const [selectedChart, setSelectedChart] = useState("Investment Progress");
+  const [selectedChart, setSelectedChart] = useState("Equity Curve");
   const [selectedPeriod, setSelectedPeriod] = useState("5Y");
 
   useEffect(() => {
@@ -145,6 +145,27 @@ const ProgressChart = () => {
             pointHoverRadius: 10,
             pointHoverBackgroundColor: "rgba(255, 206, 86, 1)",
             pointHoverBorderColor: "rgba(255, 206, 86, 1)",
+          },
+        ],
+      };
+    } else if (selectedChart === "Equity Curve") {
+      cd = {
+        labels: lables,
+        datasets: [
+          {
+            label: "Equity Curve",
+            data: filteredData.map(
+              (d) => (d.current_value - d.invested_value) / 1000000,
+            ),
+            borderColor: "rgba(255, 159, 64, 1)",
+            backgroundColor: "rgba(255, 159, 64, 0.2)",
+            fill: false,
+            borderWidth: 1,
+            tension: 0.1,
+            pointRadius: 1,
+            pointHoverRadius: 10,
+            pointHoverBackgroundColor: "rgba(255, 99, 132, 1)",
+            pointHoverBorderColor: "rgba(255, 99, 132, 1)",
           },
         ],
       };

@@ -6900,10 +6900,10 @@ Kotak Mahindra Mutual Fund
 152911;INF174KA1TH7;INF174KA1TI5;Kotak MNC Fund-Direct Plan-IDCW Option;10.979;06-Mar-2026
 152913;INF174KA1TJ3;-;Kotak MNC Fund-Regular Plan- Growth;10.766;06-Mar-2026
 152912;INF174KA1TK1;INF174KA1TL9;KotaK MNC Fund-Regular Plan-IDCW OPTION;10.766;06-Mar-2026
-147727;INF174KA1EZ1;-;Kotak Pioneer Fund- Direct Plan- Growth Option;33.734;05-Mar-2026
-147724;INF174KA1EW8;-;Kotak Pioneer Fund- Regular Plan- Growth Option;30.553;05-Mar-2026
-147728;INF174KA1EU2;INF174KA1EV0;Kotak Pioneer Fund- Regular Plan- Reinvestment of Income Distribution cum capital withdrawal option;30.566;05-Mar-2026
-147725;INF174KA1EX6;INF174KA1EY4;Kotak Pioneer Fund-Direct Plan-Reinvestment of Income Distribution cum capital withdrawal option;33.729;05-Mar-2026
+147727;INF174KA1EZ1;-;Kotak Pioneer Fund- Direct Plan- Growth Option;33.532;06-Mar-2026
+147724;INF174KA1EW8;-;Kotak Pioneer Fund- Regular Plan- Growth Option;30.369;06-Mar-2026
+147728;INF174KA1EU2;INF174KA1EV0;Kotak Pioneer Fund- Regular Plan- Reinvestment of Income Distribution cum capital withdrawal option;30.382;06-Mar-2026
+147725;INF174KA1EX6;INF174KA1EY4;Kotak Pioneer Fund-Direct Plan-Reinvestment of Income Distribution cum capital withdrawal option;33.527;06-Mar-2026
 151881;INF174KA1OL0;-;Kotak Quant Fund - Direct Plan - Growth Option;15.22;06-Mar-2026
 151880;INF174KA1OM8;INF174KA1ON6;Kotak Quant Fund - Direct plan - IDCW Payout;15.221;06-Mar-2026
 151878;INF174KA1OI6;-;Kotak Quant Fund - Regular Plan - Growth Option;15.08;06-Mar-2026
@@ -10259,10 +10259,10 @@ Bandhan Mutual Fund
  
 Baroda BNP Paribas Mutual Fund
  
-150285;INF251K01QT5;-;Baroda BNP Paribas Aqua Fund of Fund - Direct Plan - Growth Option;15.7939;05-Mar-2026
-150287;INF251K01QU3;INF251K01QV1;Baroda BNP Paribas Aqua Fund of Fund - Direct Plan - IDCW Option;15.7939;05-Mar-2026
-150286;INF251K01QR9;INF251K01QS7;Baroda BNP Paribas Aqua Fund of Fund - Regular Plan - IDCW Option;15.0027;05-Mar-2026
-150284;INF251K01QQ1;-;Baroda BNP Paribas Aqua Fund of Fund - Regular Plan Growth;15.0027;05-Mar-2026
+150285;INF251K01QT5;-;Baroda BNP Paribas Aqua Fund of Fund - Direct Plan - Growth Option;15.4936;06-Mar-2026
+150287;INF251K01QU3;INF251K01QV1;Baroda BNP Paribas Aqua Fund of Fund - Direct Plan - IDCW Option;15.4936;06-Mar-2026
+150286;INF251K01QR9;INF251K01QS7;Baroda BNP Paribas Aqua Fund of Fund - Regular Plan - IDCW Option;14.7171;06-Mar-2026
+150284;INF251K01QQ1;-;Baroda BNP Paribas Aqua Fund of Fund - Regular Plan Growth;14.7171;06-Mar-2026
  
 DSP Mutual Fund
  
@@ -10315,8 +10315,8 @@ Franklin Templeton Mutual Fund
  
 HDFC Mutual Fund
  
-149180;INF179KC1BO4;-;HDFC Developed World Overseas Equity Passive FOF - Direct Plan - Growth Option;18.918;05-Mar-2026
-149181;INF179KC1BP1;-;HDFC Developed World Overseas Equity Passive FOF - Growth Option;18.532;05-Mar-2026
+149180;INF179KC1BO4;-;HDFC Developed World Overseas Equity Passive FOF - Direct Plan - Growth Option;18.828;06-Mar-2026
+149181;INF179KC1BP1;-;HDFC Developed World Overseas Equity Passive FOF - Growth Option;18.443;06-Mar-2026
  
 HSBC Mutual Fund
  
@@ -10371,10 +10371,10 @@ Kotak Mahindra Mutual Fund
 106442;INF174K01DX9;INF174K01DW1;Kotak Global Emerging Market Overseas Equity Omni FOF - Payout of Income Distribution cum capital withdrawal option;33.317;06-Mar-2026
 119778;INF174K01LX2;INF174K01LY0;Kotak Global Emerging Market Overseas Equity Omni FOF - Payout of Income Distribution cum capital withdrawal option - Direct;36.393;06-Mar-2026
 106441;INF174K01DV3;-;Kotak Global Emerging Market Overseas Equity Omni FOF- Growth;33.314;06-Mar-2026
-149058;INF174KA1HE9;INF174KA1HF6;Kotak Global Innovation Overseas Equity Omni FOF - Regular Plan -IDCW Option;12.601;05-Mar-2026
-149056;INF174KA1HD1;-;Kotak Global Innovation Overseas Equity Omni FOF - Regular Plan-Growth;12.6006;05-Mar-2026
-149060;INF174KA1HH2;INF174KA1HI0;Kotak Global Innovation Overseas Equity Omni FOF- Direct Plan - IDCW Option;13.3092;05-Mar-2026
-149059;INF174KA1HG4;-;Kotak Global Innovation Overseas Equity Omni FOF- Direct Plan -Growth;13.3111;05-Mar-2026
+149058;INF174KA1HE9;INF174KA1HF6;Kotak Global Innovation Overseas Equity Omni FOF - Regular Plan -IDCW Option;12.4445;06-Mar-2026
+149056;INF174KA1HD1;-;Kotak Global Innovation Overseas Equity Omni FOF - Regular Plan-Growth;12.4441;06-Mar-2026
+149060;INF174KA1HH2;INF174KA1HI0;Kotak Global Innovation Overseas Equity Omni FOF- Direct Plan - IDCW Option;13.1443;06-Mar-2026
+149059;INF174KA1HG4;-;Kotak Global Innovation Overseas Equity Omni FOF- Direct Plan -Growth;13.1462;06-Mar-2026
 148646;INF174KA1FO2;-;Kotak International REIT Overseas Equity Omni FOF - Direct Plan - Growth;11.8072;06-Mar-2026
 148649;INF174KA1FN4;INF174KA1FP9;Kotak International REIT Overseas Equity Omni FOF - Direct Plan - Payout of Income Distribution cum capital withdrawal option;11.8071;06-Mar-2026
 148645;INF174KA1FL8;-;Kotak International REIT Overseas Equity Omni FOF - Regular Plan - Growth;11.2712;06-Mar-2026
@@ -10445,10 +10445,10 @@ SBI Mutual Fund
  
 Sundaram Mutual Fund
  
-119602;INF903J01OB6;-;Sundaram Global Brand Theme-Equity Active FOF - Direct Growth;43.1723;05-Mar-2026
-119601;INF903J01NZ7;INF903J01OA8;Sundaram Global Brand Theme-Equity Active FOF - Direct IDCW;36.2318;05-Mar-2026
-106370;INF903J01EX1;-;Sundaram Global Brand Theme-Equity Active FOF - Regular Growth;39.2050;05-Mar-2026
-106369;INF903J01EY9;INF903J01EZ6;Sundaram Global Brand Theme-Equity Active FOF - Regular IDCW;31.6926;05-Mar-2026
+119602;INF903J01OB6;-;Sundaram Global Brand Theme-Equity Active FOF - Direct Growth;42.8436;06-Mar-2026
+119601;INF903J01NZ7;INF903J01OA8;Sundaram Global Brand Theme-Equity Active FOF - Direct IDCW;35.9560;06-Mar-2026
+106370;INF903J01EX1;-;Sundaram Global Brand Theme-Equity Active FOF - Regular Growth;38.9055;06-Mar-2026
+106369;INF903J01EY9;INF903J01EZ6;Sundaram Global Brand Theme-Equity Active FOF - Regular IDCW;31.4505;06-Mar-2026
  
 Open Ended Schemes(Other Scheme - Gold ETF)
  
@@ -10510,7 +10510,7 @@ Kotak Mahindra Mutual Fund
  
 LIC Mutual Fund
  
-151961;INF397L01554;-;LIC MF Gold Exchange Traded Fund;142.4556;06-Mar-2026
+151961;INF397L01554;-;LIC MF Gold Exchange Traded Fund;143.4628;09-Mar-2026
  
 Mirae Asset Mutual Fund
  

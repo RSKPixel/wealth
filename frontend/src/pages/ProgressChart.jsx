@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import GlobalContext from "../templates/GlobalContext";
-import { Line } from "react-chartjs-2";
+import { Line, Doughnut, PolarArea } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,9 +10,12 @@ import {
   Title,
   Tooltip,
   Legend,
+  ArcElement,
+  RadialLinearScale,
 } from "chart.js";
 
 ChartJS.register(
+  RadialLinearScale,
   CategoryScale,
   LinearScale,
   PointElement,
@@ -20,12 +23,16 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
+  ArcElement,
 );
+
 import moment from "moment";
 
 const ProgressChart = () => {
   const { api, client_pan } = useContext(GlobalContext);
   const [chartData, setChartData] = useState({});
+  const [assetAllocationData, setAssetAllocationData] = useState({});
+  const [assetClassData, setAssetClassData] = useState({});
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const charts = [
@@ -58,7 +65,8 @@ const ProgressChart = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        setData(data.data);
+        setData(data.data.progress);
+        setAssetClassData(data.data.asset_allocation);
       });
   }, [api, client_pan]);
 
@@ -171,9 +179,28 @@ const ProgressChart = () => {
       };
     }
 
+    const ac = {
+      labels: assetClassData.map((d) => d.asset_class),
+      datasets: [
+        {
+          label: "Asset Allocation",
+          data: assetClassData.map((d) => d.hvp),
+          backgroundColor: [
+            "#3b82f6", // Equity
+            "#10b981", // Debt
+            "#f59e0b", // Gold
+          ],
+          borderColor: ["#2563eb", "#059669", "#d97706"],
+          borderWidth: 1,
+        },
+      ],
+    };
+
+    console.log(ac);
+    setAssetAllocationData(ac);
     setChartData(cd);
     setLoading(false);
-  }, [data, selectedPeriod, selectedChart]);
+  }, [data, assetClassData, selectedPeriod, selectedChart]);
 
   if (loading) {
     return (
@@ -208,11 +235,20 @@ const ProgressChart = () => {
           </span>
         ))}
       </div>
-      <div className="h-96 grid grid-cols-4 gap-4">
+      <div className="h-96 grid grid-cols-2 gap-4">
         <div className="border-r border-cyan-900">
           {chartData && (
             <Line
               data={chartData}
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
+              options={{ responsive: true, maintainAspectRatio: false }}
+            />
+          )}
+        </div>
+        <div className="pb-4">
+          {assetAllocationData && (
+            <Doughnut
+              data={assetAllocationData}
               style={{ maxWidth: "100%", maxHeight: "100%" }}
               options={{ responsive: true, maintainAspectRatio: false }}
             />

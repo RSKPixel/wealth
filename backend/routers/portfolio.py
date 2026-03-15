@@ -81,10 +81,45 @@ def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
     progress = progress.round(
         {"invested_value": 2, "current_value": 2, "pl": 2, "plp": 2, "drawdown": 2}
     )
+
+    sql = text(
+        """
+        SELECT
+            asset_class,
+            CAST(SUM(holding_value) as NUMERIC(14,2)) as holding_value,
+            CAST(SUM(current_value) as NUMERIC(14,2)) as current_value
+        FROM
+            portfolio
+        WHERE
+            client_pan=:client_pan
+        GROUP BY asset_class;
+        """
+    )
+    with engine.connect() as connection:
+        params = {"client_pan": client_pan}
+        result = connection.execute(sql, params)
+        asset_allocation = pd.DataFrame(result.fetchall(), columns=result.keys())
+
+    numeric_cols = ["holding_value", "current_value"]
+    for col in numeric_cols:
+        asset_allocation[col] = pd.to_numeric(asset_allocation[col], errors="coerce")
+
+    total_current_value = asset_allocation["current_value"].sum()
+    total_holding_value = asset_allocation["holding_value"].sum()
+    asset_allocation["hvp"] = round(
+        (asset_allocation["holding_value"] / total_holding_value) * 100, 2
+    )
+    asset_allocation["cvp"] = round(
+        (asset_allocation["current_value"] / total_current_value) * 100, 2
+    )
+
     return {
         "status": "success",
         "message": "Portfolio progress fetched successfully",
-        "data": progress.to_dict(orient="records"),
+        "data": {
+            "progress": progress.to_dict(orient="records"),
+            "asset_allocation": asset_allocation.to_dict(orient="records"),
+        },
     }
 
 

@@ -235,7 +235,14 @@ def amfi_eod():
 
         # if scheme_name contains Gold then asset_class is Gold else it is Equity
         df["asset_class"] = df.apply(
-            lambda x: "Gold" if "Gold" in x["scheme_name"] else x["asset_class"], axis=1
+            lambda x: (
+                "Gold" if "gold" in x["scheme_name"].lower() else x["asset_class"]
+            ),
+            axis=1,
+        )
+
+        df.loc[df["scheme_name"].str.contains("gold", case=False), "scheme_type"] = (
+            "Gold"
         )
 
         df = df[

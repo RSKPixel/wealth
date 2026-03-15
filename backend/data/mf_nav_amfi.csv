@@ -13,8 +13,8 @@ date,scheme_code,scheme_name,amc_code,amc_name,isin_1,isin_2,nav,asset_class,sch
 2026-03-13,120828,quant Small Cap Fund - Growth Option - Direct Plan,13,quant Mutual Fund,INF966L01689,-,246.7671,Equity,Equity
 2026-03-13,102885,SBI EQUITY HYBRID FUND - REGULAR PLAN -Growth,22,SBI Mutual Fund,INF200K01107,-,290.024,Equity,Hybrid
 2026-03-13,118968,HDFC Balanced Advantage Fund - Growth Plan - Direct Plan,9,HDFC Mutual Fund,INF179K01WA6,-,540.975,Equity,Hybrid
-2026-03-13,118663,Nippon India Gold Savings Fund - Direct Plan Growth Plan - Growth Option,21,Nippon India Mutual Fund,INF204K01YC4,-,62.827,Gold,Fund of Funds
-2026-03-13,119788,SBI GOLD FUND- DIRECT PLAN - GROWTH,22,SBI Mutual Fund,INF200K01RP8,-,48.1963,Equity,Fund of Funds
+2026-03-13,118663,Nippon India Gold Savings Fund - Direct Plan Growth Plan - Growth Option,21,Nippon India Mutual Fund,INF204K01YC4,-,62.827,Gold,Gold
+2026-03-13,119788,SBI GOLD FUND- DIRECT PLAN - GROWTH,22,SBI Mutual Fund,INF200K01RP8,-,48.1963,Gold,Gold
 2026-03-13,119063,HDFC Nifty 50 Index Fund - Direct Plan,9,HDFC Mutual Fund,INF179K01WM1,-,225.1108,Equity,Index Funds
 2026-03-13,120684,ICICI Prudential Nifty Next 50 Index Fund - Direct Plan -  Growth,20,ICICI Prudential Mutual Fund,INF109K01Y80,-,60.0261,Equity,Index Funds
 2026-03-13,148726,Nippon India Nifty Midcap 150 Index Fund - Direct Plan - Growth Option,21,Nippon India Mutual Fund,INF204KB18Z7,-,23.4123,Equity,Index Funds

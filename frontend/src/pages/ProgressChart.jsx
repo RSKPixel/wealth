@@ -208,14 +208,16 @@ const ProgressChart = () => {
           </span>
         ))}
       </div>
-      <div className="h-96">
-        {chartData && (
-          <Line
-            data={chartData}
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-            options={{ responsive: true, maintainAspectRatio: false }}
-          />
-        )}
+      <div className="h-96 grid grid-cols-4 gap-4">
+        <div className="border-r border-cyan-900">
+          {chartData && (
+            <Line
+              data={chartData}
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
+              options={{ responsive: true, maintainAspectRatio: false }}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

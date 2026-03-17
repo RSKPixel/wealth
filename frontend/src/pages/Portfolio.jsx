@@ -4,6 +4,7 @@ import GlobalContext from "../templates/GlobalContext";
 import numeral from "numeral";
 import ProgressChart from "./ProgressChart";
 import Loader from "../../components/Loader";
+import { data } from "react-router-dom";
 
 const Portfolio = () => {
   const { api, setSelectedMenuItem, client_pan } = useContext(GlobalContext);
@@ -15,9 +16,11 @@ const Portfolio = () => {
   const [loading, setLoading] = useState(true);
   const [loadingMessage, setLoadingMessage] = useState("");
   const [fvCycles, setFvCycles] = useState(5);
+  const [data, setData] = useState([]);
   const fileInputRef = useRef(null);
 
   useEffect(() => {
+    setLoading(true);
     setLoadingMessage("Loading portfolio data...");
     setSelectedMenuItem("Portfolio");
 
@@ -33,9 +36,27 @@ const Portfolio = () => {
       .then((data) => {
         setHoldings(data.data.holdings);
         setSummary(data.data.summary);
+        // setData([]);
         setLoading(false);
       });
   }, [refresh, selectedPortfolio]);
+
+  useEffect(() => {
+    setLoading(true);
+    setLoadingMessage("Loading chart data...");
+    const fd = new FormData();
+    fd.append("client_pan", client_pan);
+    fd.append("portfolio", selectedPortfolio);
+    fetch(`${api}/wealth/portfolio-progress`, {
+      method: "POST",
+      body: fd,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data.data);
+        setLoading(false);
+      });
+  }, [data]);
 
   const handleUpload = (event) => {
     const file = event.target.files[0];
@@ -150,7 +171,7 @@ const Portfolio = () => {
               Current Value
             </span>
             <span
-              className="text-center text-lg font-bold text-orange-200"
+              className="text-center text-lg font-bold text-orange-200 underline underline-offset-4 decoration-dotted decoration-yellow-400"
               onClick={changeCycle}
             >
               FV {fvCycles}Y
@@ -181,7 +202,13 @@ const Portfolio = () => {
           </div>
         </div>
         <div className="flex flex-col mb-4 w-full">
-          <ProgressChart selectedPortfolio={selectedPortfolio} />
+          <ProgressChart
+            data={data}
+            selectedPortfolio={selectedPortfolio}
+            setLoading={setLoading}
+            setLoadingMessage={setLoadingMessage}
+            loading={loading}
+          />
         </div>
         <div className="grid grid-cols-3 gap-4">
           {holdings.length === 0 && (

@@ -28,12 +28,11 @@ ChartJS.register(
 
 import moment from "moment";
 
-const ProgressChart = ({ selectedPortfolio }) => {
+const ProgressChart = ({ data }) => {
   const { api, client_pan } = useContext(GlobalContext);
   const [chartData, setChartData] = useState({});
   const [assetAllocationData, setAssetAllocationData] = useState({});
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const charts = [
     "Equity Curve",
     "Investment Progress",
@@ -55,22 +54,7 @@ const ProgressChart = ({ selectedPortfolio }) => {
   const [selectedPeriod, setSelectedPeriod] = useState("5Y");
 
   useEffect(() => {
-    const fd = new FormData();
-    fd.append("client_pan", client_pan);
-    fd.append("portfolio", selectedPortfolio);
-    fetch(`${api}/wealth/portfolio-progress`, {
-      method: "POST",
-      body: fd,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data.data);
-      });
-  }, [api, client_pan, selectedPortfolio]);
-
-  useEffect(() => {
     if (data.length === 0) {
-      setLoading(true);
       return;
     }
 
@@ -223,18 +207,17 @@ const ProgressChart = ({ selectedPortfolio }) => {
 
     setAssetAllocationData(ac);
     setChartData(cd);
-    setLoading(false);
-  }, [data, selectedPeriod, selectedChart]);
+  }, [data]);
 
-  if (loading) {
-    return (
-      <div className="bg-cyan-950/20 h-96 flex flex-col items-center justify-center border-cyan-800 border text-gray-300 rounded-lg cursor-pointer">
-        <p>Loading Chart...</p>
-        <br />
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-cyan-900"></div>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="bg-cyan-950/20 h-96 flex flex-col items-center justify-center border-cyan-800 border text-gray-300 rounded-lg cursor-pointer">
+  //       <p>Loading Chart...</p>
+  //       <br />
+  //       <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-cyan-900"></div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="flex flex-col bg-cyan-950/20 border-cyan-800 border text-gray-300 rounded-lg cursor-pointer">

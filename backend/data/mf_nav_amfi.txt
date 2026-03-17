@@ -4423,10 +4423,10 @@ Open Ended Schemes(Equity Scheme - Dividend Yield Fund)
  
 Aditya Birla Sun Life Mutual Fund
  
-119507;INF209K01WA1;-;Aditya Birla Sun Life Dividend Yield Fund - Growth - Direct Plan;476.9;13-Mar-2026
-101738;INF209K01405;-;Aditya Birla Sun Life Dividend Yield Fund - Growth - Regular Plan;431.89;13-Mar-2026
-119506;INF209K01Q55;INF209K01WB9;Aditya Birla Sun Life Dividend Yield Fund -DIRECT - IDCW;45.52;13-Mar-2026
-101737;INF209K01397;INF209K01CP1;Aditya Birla Sun Life Dividend Yield Fund -REGULAR - IDCW;24.96;13-Mar-2026
+119507;INF209K01WA1;-;Aditya Birla Sun Life Dividend Yield Fund - Growth - Direct Plan;477.17;16-Mar-2026
+101738;INF209K01405;-;Aditya Birla Sun Life Dividend Yield Fund - Growth - Regular Plan;432.1;16-Mar-2026
+119506;INF209K01Q55;INF209K01WB9;Aditya Birla Sun Life Dividend Yield Fund -DIRECT - IDCW;45.55;16-Mar-2026
+101737;INF209K01397;INF209K01CP1;Aditya Birla Sun Life Dividend Yield Fund -REGULAR - IDCW;24.97;16-Mar-2026
  
 Baroda BNP Paribas Mutual Fund
  
@@ -5354,10 +5354,10 @@ Aditya Birla Sun Life Mutual Fund
  
 Axis Mutual Fund
  
-145110;INF846K01J46;-;Axis Large & Mid Cap Fund - Direct Plan - Growth;33.99;13-Mar-2026
-145109;INF846K01J53;INF846K01J61;Axis Large & Mid Cap Fund - Direct Plan - IDCW;22.80;13-Mar-2026
-145112;INF846K01J79;-;Axis Large & Mid Cap Fund - Regular Plan - Growth;30.64;13-Mar-2026
-145111;INF846K01J87;INF846K01J95;Axis Large & Mid Cap Fund - Regular Plan - IDCW;17.87;13-Mar-2026
+145110;INF846K01J46;-;Axis Large & Mid Cap Fund - Direct Plan - Growth;34.11;16-Mar-2026
+145109;INF846K01J53;INF846K01J61;Axis Large & Mid Cap Fund - Direct Plan - IDCW;22.89;16-Mar-2026
+145112;INF846K01J79;-;Axis Large & Mid Cap Fund - Regular Plan - Growth;30.74;16-Mar-2026
+145111;INF846K01J87;INF846K01J95;Axis Large & Mid Cap Fund - Regular Plan - IDCW;17.93;16-Mar-2026
  
 Bajaj Finserv Mutual Fund
  
@@ -6321,10 +6321,10 @@ Aditya Birla Sun Life Mutual Fund
 125597;INF209K014W1;-;Aditya Birla Sun Life Banking and Financial Services Fund - Direct Plan - Growth;66.31;16-Mar-2026
 125596;INF209K010W9;INF209K012W5;Aditya Birla Sun Life Banking and Financial Services Fund - REGULAR - IDCW;21.49;16-Mar-2026
 125595;INF209K011W7;-;Aditya Birla Sun Life Banking and Financial Services Fund - Regular Plan - Growth;58.76;16-Mar-2026
-149295;INF209KB14D2;-;Aditya Birla Sun Life Business Cycle Fund-Direct Growth;14.85;13-Mar-2026
-149297;INF209KB15D9;-;Aditya Birla Sun Life Business Cycle Fund-Direct IDCW Payout;12.99;13-Mar-2026
-149294;INF209KB13D4;-;Aditya Birla Sun Life Business Cycle Fund-Regular IDCW Payout;12.3;13-Mar-2026
-149296;INF209KB12D6;-;Aditya Birla Sun Life Business Cycle Fund-Regular-Growth;14.05;13-Mar-2026
+149295;INF209KB14D2;-;Aditya Birla Sun Life Business Cycle Fund-Direct Growth;14.93;16-Mar-2026
+149297;INF209KB15D9;-;Aditya Birla Sun Life Business Cycle Fund-Direct IDCW Payout;13.06;16-Mar-2026
+149294;INF209KB13D4;-;Aditya Birla Sun Life Business Cycle Fund-Regular IDCW Payout;12.36;16-Mar-2026
+149296;INF209KB12D6;-;Aditya Birla Sun Life Business Cycle Fund-Regular-Growth;14.13;16-Mar-2026
 119576;INF209K01VL0;-;Aditya Birla Sun Life Commodity Equities Fund - Global Agri Plan - Growth - Direct Plan;37.3501;28-Jul-2023
 111349;INF209K01207;-;Aditya Birla Sun Life Commodity Equities Fund - Global Agri Plan - Growth - Regular Plan;35.7925;28-Jul-2023
 119575;INF209K01P64;INF209K01VM8;Aditya Birla Sun Life Commodity Equities Fund - Global Agri Plan -Direct - IDCW;21.5614;28-Jul-2023
@@ -6337,10 +6337,10 @@ Aditya Birla Sun Life Mutual Fund
 119590;INF209K01Q63;-;Aditya Birla Sun Life Consumption Fund -DIRECT - IDCW;45.68;16-Mar-2026
 103110;INF209K01439;INF209K01CR7;Aditya Birla Sun Life Consumption Fund -Regular - IDCW;35.77;16-Mar-2026
 103111;INF209K01447;-;Aditya Birla Sun Life Consumption Fund-Growth Option;191.84;16-Mar-2026
-120539;INF209K01VF2;-;Aditya Birla Sun Life Digital India Fund - Growth - Direct Plan;155.05;13-Mar-2026
-103168;INF209K01140;-;Aditya Birla Sun Life Digital India Fund - Growth - Regular Plan;136.85;13-Mar-2026
-120538;INF209K01P49;INF209K01VE5;Aditya Birla Sun Life Digital India Fund -DIRECT - IDCW;46.49;13-Mar-2026
-103167;INF209K01132;INF209K01CD7;Aditya Birla Sun Life Digital India Fund -Regular - IDCW;33.95;13-Mar-2026
+120539;INF209K01VF2;-;Aditya Birla Sun Life Digital India Fund - Growth - Direct Plan;155.26;16-Mar-2026
+103168;INF209K01140;-;Aditya Birla Sun Life Digital India Fund - Growth - Regular Plan;137.02;16-Mar-2026
+120538;INF209K01P49;INF209K01VE5;Aditya Birla Sun Life Digital India Fund -DIRECT - IDCW;46.55;16-Mar-2026
+103167;INF209K01132;INF209K01CD7;Aditya Birla Sun Life Digital India Fund -Regular - IDCW;33.99;16-Mar-2026
 148640;INF209KB1U84;INF209KB1U92;Aditya Birla Sun Life ESG Integration Strategy Fund-Direct - Payout of IDCW;15.59;16-Mar-2026
 148637;INF209KB1U76;-;Aditya Birla Sun Life ESG Integration Strategy Fund-Direct Plan-Growth;17.88;16-Mar-2026
 148636;INF209KB1U50;INF209KB1U68;Aditya Birla Sun Life ESG Integration Strategy Fund-Regular - Payout of IDCW;14.49;16-Mar-2026
@@ -6349,10 +6349,10 @@ Aditya Birla Sun Life Mutual Fund
 103475;INF209K01470;INF209K01CT3;Aditya Birla Sun Life Infrastructure Fund -  Regular - IDCW;24.64;16-Mar-2026
 119514;INF209K01WH6;-;Aditya Birla Sun Life Infrastructure Fund - Growth - Direct Plan;99.51;16-Mar-2026
 103476;INF209K01504;-;Aditya Birla Sun Life Infrastructure Fund-Growth;89.7;16-Mar-2026
-119516;INF209K01Q89;INF209K01WT1;Aditya Birla Sun Life International Equity Fund - Direct - IDCW;49.8791;13-Mar-2026
-119517;INF209K01WS3;-;Aditya Birla Sun Life International Equity Fund - Growth - Direct Plan;49.8496;13-Mar-2026
-106873;INF209K01520;-;Aditya Birla Sun Life International Equity Fund - Growth - Regular Plan;46.1011;13-Mar-2026
-106872;INF209K01512;INF209K01CV9;Aditya Birla Sun Life International Equity Fund - Regular - IDCW;21.1022;13-Mar-2026
+119516;INF209K01Q89;INF209K01WT1;Aditya Birla Sun Life International Equity Fund - Direct - IDCW;50.4021;16-Mar-2026
+119517;INF209K01WS3;-;Aditya Birla Sun Life International Equity Fund - Growth - Direct Plan;50.3722;16-Mar-2026
+106873;INF209K01520;-;Aditya Birla Sun Life International Equity Fund - Growth - Regular Plan;46.5827;16-Mar-2026
+106872;INF209K01512;INF209K01CV9;Aditya Birla Sun Life International Equity Fund - Regular - IDCW;21.3226;16-Mar-2026
 119519;INF209K01Q97;INF209K01WV7;Aditya Birla Sun Life International Equity Fund - Plan B - Direct - IDCW;23.1342;28-Jul-2023
 119518;INF209K01WU9;-;Aditya Birla Sun Life International Equity Fund - Plan B - Growth - Direct Plan;30.2806;28-Jul-2023
 106876;INF209K01546;-;Aditya Birla Sun Life International Equity Fund - Plan B - Growth - Regular Plan;28.8036;28-Jul-2023
@@ -6361,10 +6361,10 @@ Aditya Birla Sun Life Mutual Fund
 133516;INF209KA1YK0;-;Aditya Birla Sun Life Manufacturing Equity Fund - Direct Plan - Growth;35.36;16-Mar-2026
 133515;INF209KA1YI4;INF209KA1YJ2;Aditya Birla Sun Life Manufacturing Equity Fund - Regular - IDCW;19.02;16-Mar-2026
 133513;INF209KA1YH6;-;Aditya Birla Sun Life Manufacturing Equity Fund - Regular Plan - Growth;31.95;16-Mar-2026
-119647;INF209K01Q06;INF209K01VU1;Aditya Birla Sun Life MNC Fund - DIRECT - IDCW;426.23;13-Mar-2026
-119646;INF209K01VT3;-;Aditya Birla Sun Life MNC Fund - Growth - Direct Plan;1332.91;13-Mar-2026
-100064;INF209K01322;-;Aditya Birla Sun Life MNC Fund - Growth - Regular Plan;1192.33;13-Mar-2026
-100063;INF209K01314;INF209K01CL0;Aditya Birla Sun Life MNC Fund - Regular - IDCW;205.93;13-Mar-2026
+119647;INF209K01Q06;INF209K01VU1;Aditya Birla Sun Life MNC Fund - DIRECT - IDCW;424.41;16-Mar-2026
+119646;INF209K01VT3;-;Aditya Birla Sun Life MNC Fund - Growth - Direct Plan;1327.21;16-Mar-2026
+100064;INF209K01322;-;Aditya Birla Sun Life MNC Fund - Growth - Regular Plan;1187.16;16-Mar-2026
+100063;INF209K01314;INF209K01CL0;Aditya Birla Sun Life MNC Fund - Regular - IDCW;205.04;16-Mar-2026
 147410;INF209KB1O33;INF209KB1O41;Aditya Birla Sun Life Pharma and Healthcare Fund-Direct - Payout of IDCW;21.96;16-Mar-2026
 147409;INF209KB1O25;-;Aditya Birla Sun Life Pharma and Healthcare Fund-Direct-Growth;33.78;16-Mar-2026
 147408;INF209KB1O09;INF209KB1O17;Aditya Birla Sun Life Pharma and Healthcare Fund-Regular - Payout of IDCW;20.14;16-Mar-2026
@@ -6404,10 +6404,10 @@ Axis Mutual Fund
 152204;INF846K017S1;INF846K018S9;Axis India Manufacturing Fund - Direct Plan - IDCW;13.88;16-Mar-2026
 152205;INF846K013S0;-;Axis India Manufacturing Fund - Regular Plan - Growth;13.45;16-Mar-2026
 152203;INF846K014S8;INF846K015S5;Axis India Manufacturing Fund - Regular Plan - IDCW;13.45;16-Mar-2026
-148634;INF846K01X71;-;Axis Innovation Fund - Direct Plan - Growth Option;18.09;13-Mar-2026
-148632;INF846K01X89;INF846K01X97;Axis Innovation Fund - Direct Plan - IDCW;16.46;13-Mar-2026
-148631;INF846K01Y05;-;Axis Innovation Fund - Regular Plan - Growth Option;16.93;13-Mar-2026
-148633;INF846K01Y13;INF846K01Y21;Axis Innovation Fund - Regular Plan - IDCW;15.40;13-Mar-2026
+148634;INF846K01X71;-;Axis Innovation Fund - Direct Plan - Growth Option;18.21;16-Mar-2026
+148632;INF846K01X89;INF846K01X97;Axis Innovation Fund - Direct Plan - IDCW;16.57;16-Mar-2026
+148631;INF846K01Y05;-;Axis Innovation Fund - Regular Plan - Growth Option;17.04;16-Mar-2026
+148633;INF846K01Y13;INF846K01Y21;Axis Innovation Fund - Regular Plan - IDCW;15.51;16-Mar-2026
 153083;INF846K011Z9;-;Axis Momentum Fund - Direct Plan - Growth Option;8.51;16-Mar-2026
 153084;INF846K013Z5;INF846K015Z0;Axis Momentum Fund - Direct Plan - IDCW Option;8.51;16-Mar-2026
 153085;INF846K010Z1;-;Axis Momentum Fund - Regular Plan - Growth Option;8.34;16-Mar-2026
@@ -6924,10 +6924,10 @@ Kotak Mahindra Mutual Fund
 152704;INF174KA1SG1;-;Kotak Special Opportunities Fund - Direct Plan - IDCW Payout Option;9.03;16-Mar-2026
 152703;INF174KA1SC0;-;Kotak Special Opportunities Fund - Regular Plan - Growth Option;8.818;16-Mar-2026
 152700;INF174KA1SD8;INF174KA1SE6;Kotak Special Opportunities Fund - Regular Plan - IDCW Option;8.817;16-Mar-2026
-152462;INF174KA1QZ5;-;Kotak Technology Fund - Direct Plan - Growth Option;9.711;13-Mar-2026
-152463;INF174KA1RA6;INF174KA1RB4;Kotak Technology Fund - Direct Plan - IDCW Option;9.711;13-Mar-2026
-152460;INF174KA1QW2;-;Kotak Technology Fund - Regular Plan - Growth Option;9.43;13-Mar-2026
-152461;INF174KA1QX0;INF174KA1QY8;Kotak Technology Fund - Regular Plan - IDCW Option;9.431;13-Mar-2026
+152462;INF174KA1QZ5;-;Kotak Technology Fund - Direct Plan - Growth Option;9.712;16-Mar-2026
+152463;INF174KA1RA6;INF174KA1RB4;Kotak Technology Fund - Direct Plan - IDCW Option;9.712;16-Mar-2026
+152460;INF174KA1QW2;-;Kotak Technology Fund - Regular Plan - Growth Option;9.429;16-Mar-2026
+152461;INF174KA1QX0;INF174KA1QY8;Kotak Technology Fund - Regular Plan - IDCW Option;9.43;16-Mar-2026
 153117;INF174KA1TT2;INF174KA1TU0;Kotak Transportation & Logistics Fund-Direct -IDCW-PAYOUT & REINVESTMENT;10.451;16-Mar-2026
 153118;INF174KA1TS4;-;Kotak Transportation & Logistics Fund-Direct Growth;10.451;16-Mar-2026
 153116;INF174KA1TV8;-;Kotak Transportation & Logistics Fund-Regular-Growth;10.247;16-Mar-2026
@@ -8083,16 +8083,16 @@ PGIM India Mutual Fund
  
 138385;INF223J01903;-;PGIM India Aggressive Hybrid Equity Fund - BONUS OPTION;16.60;25-Jul-2016
 142422;INF663L01ZC6;INF663L01ZD4;PGIM India Aggressive Hybrid Equity Fund - Direct Plan - Annual Dividend Option;13.27;05-Mar-2021
-138387;INF663L01GY0;INF663L01GZ7;PGIM India Aggressive Hybrid Equity Fund - Direct Plan - Dividend;25.12;13-Mar-2026
-138386;INF663L01GX2;-;PGIM India Aggressive Hybrid Equity Fund - Direct Plan - Growth;144.63;13-Mar-2026
-138381;INF663L01HA8;INF663L01HB6;PGIM India Aggressive Hybrid Equity Fund - Dividend Option;14.07;13-Mar-2026
-138382;INF663L01HC4;-;PGIM India Aggressive Hybrid Equity Fund - Growth Option;119.9;13-Mar-2026
+138387;INF663L01GY0;INF663L01GZ7;PGIM India Aggressive Hybrid Equity Fund - Direct Plan - Dividend;25.27;16-Mar-2026
+138386;INF663L01GX2;-;PGIM India Aggressive Hybrid Equity Fund - Direct Plan - Growth;145.49;16-Mar-2026
+138381;INF663L01HA8;INF663L01HB6;PGIM India Aggressive Hybrid Equity Fund - Dividend Option;14.15;16-Mar-2026
+138382;INF663L01HC4;-;PGIM India Aggressive Hybrid Equity Fund - Growth Option;120.6;16-Mar-2026
 142421;INF663L01ZA0;INF663L01ZB8;PGIM India Aggressive Hybrid Equity Fund - Regular Plan - Annual Dividend Option;12.98;05-Mar-2021
 138384;INF223J01309;-;PGIM India Aggressive Hybrid Equity Fund Wealth Plan- Dividend Option;16.48;28-Jul-2019
 138383;INF223J01325;-;PGIM India Aggressive Hybrid Equity Fund Wealth Plan- Growth Option;30.02;28-Jul-2019
-139820;INF663L01OA4;INF663L01OB2;PGIM India Aggressive Hybrid Equity Fund-Direct Plan-Monthly Dividend Option;23.88;13-Mar-2026
+139820;INF663L01OA4;INF663L01OB2;PGIM India Aggressive Hybrid Equity Fund-Direct Plan-Monthly Dividend Option;24.02;16-Mar-2026
 139823;INF663L01OE6;INF663L01OF3;PGIM India Aggressive Hybrid Equity Fund-Direct Plan-Quarterly Divdend Option;21.55;05-Mar-2021
-139821;INF663L01NY6;INF663L01NZ3;PGIM India Aggressive Hybrid Equity Fund-Monthly Dividend Option;21.22;13-Mar-2026
+139821;INF663L01NY6;INF663L01NZ3;PGIM India Aggressive Hybrid Equity Fund-Monthly Dividend Option;21.34;16-Mar-2026
 139822;INF663L01OC0;INF663L01OD8;PGIM India Aggressive Hybrid Equity Fund-Quarterly Dividend Option;20.99;05-Mar-2021
  
 quant Mutual Fund
@@ -9179,10 +9179,10 @@ Aditya Birla Sun Life Mutual Fund
  
 Axis Mutual Fund
  
-120524;INF846K01EV4;-;Axis Multi Asset Allocation Fund - Direct Plan - Growth Option;50.1098;13-Mar-2026
-120523;INF846K01ET8;INF846K01EU6;Axis Multi Asset Allocation Fund - Direct Plan - Monthly IDCW;26.8403;13-Mar-2026
-113064;INF846K01768;-;Axis Multi Asset Allocation Fund - Regular Plan - Growth Option;42.9094;13-Mar-2026
-113065;INF846K01776;INF846K01784;Axis Multi Asset Allocation Fund - Regular Plan - Monthly IDCW;19.4042;13-Mar-2026
+120524;INF846K01EV4;-;Axis Multi Asset Allocation Fund - Direct Plan - Growth Option;50.1014;16-Mar-2026
+120523;INF846K01ET8;INF846K01EU6;Axis Multi Asset Allocation Fund - Direct Plan - Monthly IDCW;26.8358;16-Mar-2026
+113064;INF846K01768;-;Axis Multi Asset Allocation Fund - Regular Plan - Growth Option;42.8984;16-Mar-2026
+113065;INF846K01776;INF846K01784;Axis Multi Asset Allocation Fund - Regular Plan - Monthly IDCW;19.3992;16-Mar-2026
  
 Bajaj Finserv Mutual Fund
  
@@ -9589,34 +9589,34 @@ Open Ended Schemes(Other Scheme - FoF Domestic)
  
 Aditya Birla Sun Life Mutual Fund
  
-132175;INF084M01085;INF084M01093;Aditya Birla Sun Life Aggressive Hybrid Omni FOF-  Regular -  IDCW;36.2332;13-Mar-2026
-132189;INF084M01EU0;INF084M01EV8;Aditya Birla Sun Life Aggressive Hybrid Omni FOF- Direct - IDCW;39.3796;13-Mar-2026
-132185;INF084M01ET2;-;Aditya Birla Sun Life Aggressive Hybrid Omni FOF- Direct Plan - Growth Option;43.3577;13-Mar-2026
-132174;INF084M01077;-;Aditya Birla Sun Life Aggressive Hybrid Omni FOF- Regular Plan - Growth Option;40.3969;13-Mar-2026
-132179;INF084M01051;INF084M01069;Aditya Birla Sun Life Conservative Hybrid Active FOF -Regular - IDCW;31.1242;13-Mar-2026
-132183;INF084M01EQ8;-;Aditya Birla Sun Life Conservative Hybrid Active FOF- Direct Plan - Growth Option;36.4684;13-Mar-2026
-132178;INF084M01044;-;Aditya Birla Sun Life Conservative Hybrid Active FOF- Regular Plan - Growth Option;34.2102;13-Mar-2026
-132184;INF084M01ER6;INF084M01ES4;Aditya Birla Sun Life Conservative Hybrid Active FOF-Direct - IDCW;24.7613;13-Mar-2026
-132187;INF084M01EX4;INF084M01EY2;Aditya Birla Sun Life Dynamic Asset Allocation Omni FOF- Direct - IDCW;52.547;13-Mar-2026
-132186;INF084M01EW6;-;Aditya Birla Sun Life Dynamic Asset Allocation Omni FOF- Direct Plan - Growth Option;57.3773;13-Mar-2026
-132180;INF084M01101;-;Aditya Birla Sun Life Dynamic Asset Allocation Omni FOF- Regular Plan - Growth Option;51.9607;13-Mar-2026
-132181;INF084M01119;INF084M01127;Aditya Birla Sun Life Dynamic Asset Allocation Omni FOF-Regular - IDCW;47.5624;13-Mar-2026
+132175;INF084M01085;INF084M01093;Aditya Birla Sun Life Aggressive Hybrid Omni FOF-  Regular -  IDCW;36.3374;16-Mar-2026
+132189;INF084M01EU0;INF084M01EV8;Aditya Birla Sun Life Aggressive Hybrid Omni FOF- Direct - IDCW;39.4947;16-Mar-2026
+132185;INF084M01ET2;-;Aditya Birla Sun Life Aggressive Hybrid Omni FOF- Direct Plan - Growth Option;43.4844;16-Mar-2026
+132174;INF084M01077;-;Aditya Birla Sun Life Aggressive Hybrid Omni FOF- Regular Plan - Growth Option;40.5131;16-Mar-2026
+132179;INF084M01051;INF084M01069;Aditya Birla Sun Life Conservative Hybrid Active FOF -Regular - IDCW;31.1481;16-Mar-2026
+132183;INF084M01EQ8;-;Aditya Birla Sun Life Conservative Hybrid Active FOF- Direct Plan - Growth Option;36.4977;16-Mar-2026
+132178;INF084M01044;-;Aditya Birla Sun Life Conservative Hybrid Active FOF- Regular Plan - Growth Option;34.2365;16-Mar-2026
+132184;INF084M01ER6;INF084M01ES4;Aditya Birla Sun Life Conservative Hybrid Active FOF-Direct - IDCW;24.7812;16-Mar-2026
+132187;INF084M01EX4;INF084M01EY2;Aditya Birla Sun Life Dynamic Asset Allocation Omni FOF- Direct - IDCW;52.6735;16-Mar-2026
+132186;INF084M01EW6;-;Aditya Birla Sun Life Dynamic Asset Allocation Omni FOF- Direct Plan - Growth Option;57.5153;16-Mar-2026
+132180;INF084M01101;-;Aditya Birla Sun Life Dynamic Asset Allocation Omni FOF- Regular Plan - Growth Option;52.0824;16-Mar-2026
+132181;INF084M01119;INF084M01127;Aditya Birla Sun Life Dynamic Asset Allocation Omni FOF-Regular - IDCW;47.6738;16-Mar-2026
 120546;INF209K01YU5;-;Aditya Birla Sun Life Gold Fund - Growth - Direct Plan;46.4727;16-Mar-2026
 120545;INF209K01YT7;-;Aditya Birla Sun Life Gold Fund-DIRECT - IDCW;46.4713;16-Mar-2026
 116796;INF209K01PF4;-;Aditya Birla Sun Life Gold Fund-Growth;44.6168;16-Mar-2026
 116795;INF209K01PG2;INF209K01PH0;Aditya Birla Sun Life Gold Fund-REGULAR - IDCW;44.6145;16-Mar-2026
-131897;INF084M01DQ0;INF084M01DR8;Aditya Birla Sun Life Income Plus Arbitrage Active FOF- DIRECT - IDCW;25.7093;13-Mar-2026
-131898;INF084M01DP2;-;Aditya Birla Sun Life Income Plus Arbitrage Active FOF- Direct Plan - Growth Option;41.0584;13-Mar-2026
-131895;INF084M01AI3;INF084M01AJ1;Aditya Birla Sun Life Income Plus Arbitrage Active FOF- REGULAR - IDCW;24.3213;13-Mar-2026
-131896;INF084M01AH5;-;Aditya Birla Sun Life Income Plus Arbitrage Active FOF- Regular Plan - Growth Option;38.7818;13-Mar-2026
-131865;INF084M01DM9;-;Aditya Birla Sun Life Multi Asset Omni FoF- Direct Plan - Growth Option;37.6239;13-Mar-2026
-131864;INF084M01AE2;-;Aditya Birla Sun Life Multi Asset Omni FoF- Regular Plan - Growth Option;70.8477;13-Mar-2026
-131866;INF084M01DN7;INF084M01DO5;Aditya Birla Sun Life Multi Asset Omni FOF-DIRECT - IDCW;35.8514;13-Mar-2026
-131863;INF084M01AF9;INF084M01AG7;Aditya Birla Sun Life Multi Asset Omni FoF-REGULAR - IDCW;65.24;13-Mar-2026
-150688;INF209KB15M0;-;Aditya Birla Sun Life Multi-Asset Passive FOF-Direct Growth;16.6359;13-Mar-2026
-150689;INF209KB16M8;INF209KB17M6;Aditya Birla Sun Life Multi-Asset Passive FOF-Direct IDCW;16.6366;13-Mar-2026
-150690;INF209KB12M7;-;Aditya Birla Sun Life Multi-Asset Passive FOF-Regular Growth;16.4418;13-Mar-2026
-150691;INF209KB13M5;INF209KB14M3;Aditya Birla Sun Life Multi-Asset Passive FOF-Regular IDCW;16.4419;13-Mar-2026
+131897;INF084M01DQ0;INF084M01DR8;Aditya Birla Sun Life Income Plus Arbitrage Active FOF- DIRECT - IDCW;25.7054;16-Mar-2026
+131898;INF084M01DP2;-;Aditya Birla Sun Life Income Plus Arbitrage Active FOF- Direct Plan - Growth Option;41.0521;16-Mar-2026
+131895;INF084M01AI3;INF084M01AJ1;Aditya Birla Sun Life Income Plus Arbitrage Active FOF- REGULAR - IDCW;24.3169;16-Mar-2026
+131896;INF084M01AH5;-;Aditya Birla Sun Life Income Plus Arbitrage Active FOF- Regular Plan - Growth Option;38.7747;16-Mar-2026
+131865;INF084M01DM9;-;Aditya Birla Sun Life Multi Asset Omni FoF- Direct Plan - Growth Option;37.5099;16-Mar-2026
+131864;INF084M01AE2;-;Aditya Birla Sun Life Multi Asset Omni FoF- Regular Plan - Growth Option;70.6273;16-Mar-2026
+131866;INF084M01DN7;INF084M01DO5;Aditya Birla Sun Life Multi Asset Omni FOF-DIRECT - IDCW;35.7428;16-Mar-2026
+131863;INF084M01AF9;INF084M01AG7;Aditya Birla Sun Life Multi Asset Omni FoF-REGULAR - IDCW;65.037;16-Mar-2026
+150688;INF209KB15M0;-;Aditya Birla Sun Life Multi-Asset Passive FOF-Direct Growth;16.5522;16-Mar-2026
+150689;INF209KB16M8;INF209KB17M6;Aditya Birla Sun Life Multi-Asset Passive FOF-Direct IDCW;16.553;16-Mar-2026
+150690;INF209KB12M7;-;Aditya Birla Sun Life Multi-Asset Passive FOF-Regular Growth;16.3586;16-Mar-2026
+150691;INF209KB13M5;INF209KB14M3;Aditya Birla Sun Life Multi-Asset Passive FOF-Regular IDCW;16.3588;16-Mar-2026
 149780;INF209KB16F2;-;Aditya Birla Sun Life Silver ETF FOF-Direct Growth;37.9459;16-Mar-2026
 149781;INF209KB17F0;INF209KB18F8;Aditya Birla Sun Life Silver ETF FOF-Direct IDCW;37.9323;16-Mar-2026
 149783;INF209KB13F9;-;Aditya Birla Sun Life Silver ETF FOF-Regular Growth;37.2327;16-Mar-2026
@@ -9635,22 +9635,22 @@ Axis Mutual Fund
 120472;INF846K01DQ6;INF846K01DR4;Axis Gold Fund - Direct Plan - IDCW;48.3297;16-Mar-2026
 115897;INF846K01AL3;-;Axis Gold Fund - Regular Plan - Growth Option;44.3119;16-Mar-2026
 115898;INF846K01AM1;INF846K01AN9;Axis Gold Fund - Regular Plan - IDCW;44.3673;16-Mar-2026
-147895;INF846K01U25;INF846K01U17;Axis Income Plus Arbitrage Active FOF - Direct Plan - Annual IDCW;14.0728;13-Mar-2026
-147889;INF846K01U09;-;Axis Income Plus Arbitrage Active FOF - Direct Plan - Growth Option;15.2615;13-Mar-2026
-147894;INF846K01U74;INF846K01U82;Axis Income Plus Arbitrage Active FOF - Direct Plan - Half Yearly Dividend Option;11.7810;13-Mar-2026
-147891;INF846K01U90;INF846K01V08;Axis Income Plus Arbitrage Active FOF - Direct Plan - IDCW;15.2742;13-Mar-2026
-147892;INF846K01U41;INF846K01U33;Axis Income Plus Arbitrage Active FOF - Direct Plan - Monthly IDCW;15.2742;13-Mar-2026
-147893;INF846K01U66;INF846K01U58;Axis Income Plus Arbitrage Active FOF - Direct Plan - Quarterly IDCW;12.1739;13-Mar-2026
-147898;INF846K01V32;INF846K01V24;Axis Income Plus Arbitrage Active FOF - Regular Plan - Annual IDCW;13.8112;13-Mar-2026
-147890;INF846K01V16;-;Axis Income Plus Arbitrage Active FOF - Regular Plan - Growth Option;14.9649;13-Mar-2026
-147897;INF846K01V81;INF846K01V99;Axis Income Plus Arbitrage Active FOF - Regular Plan - Half Yearly IDCW;12.3253;13-Mar-2026
-147888;INF846K01W07;INF846K01W15;Axis Income Plus Arbitrage Active FOF - Regular Plan - IDCW;14.9654;13-Mar-2026
-147896;INF846K01V57;INF846K01V40;Axis Income Plus Arbitrage Active FOF - Regular Plan - Monthly IDCW;14.9641;13-Mar-2026
-147905;INF846K01V73;INF846K01V65;Axis Income Plus Arbitrage Active FOF - Regular Plan - Quarterly IDCW;11.4186;13-Mar-2026
-153924;INF846KA1283;-;Axis Income Plus Arbitrage Passive FOF - Direct Plan - Growth Option;10.1870;13-Mar-2026
-153925;INF846KA1309;INF846KA1325;Axis Income Plus Arbitrage Passive FOF - Direct Plan - IDCW Option;10.1870;13-Mar-2026
-153927;INF846KA1275;-;Axis Income Plus Arbitrage Passive FOF - Regular Plan - Growth Option;10.1749;13-Mar-2026
-153926;INF846KA1291;INF846KA1317;Axis Income Plus Arbitrage Passive FOF - Regular Plan - IDCW Option;10.1751;13-Mar-2026
+147895;INF846K01U25;INF846K01U17;Axis Income Plus Arbitrage Active FOF - Direct Plan - Annual IDCW;14.0743;16-Mar-2026
+147889;INF846K01U09;-;Axis Income Plus Arbitrage Active FOF - Direct Plan - Growth Option;15.2632;16-Mar-2026
+147894;INF846K01U74;INF846K01U82;Axis Income Plus Arbitrage Active FOF - Direct Plan - Half Yearly Dividend Option;11.7823;16-Mar-2026
+147891;INF846K01U90;INF846K01V08;Axis Income Plus Arbitrage Active FOF - Direct Plan - IDCW;15.2759;16-Mar-2026
+147892;INF846K01U41;INF846K01U33;Axis Income Plus Arbitrage Active FOF - Direct Plan - Monthly IDCW;15.2759;16-Mar-2026
+147893;INF846K01U66;INF846K01U58;Axis Income Plus Arbitrage Active FOF - Direct Plan - Quarterly IDCW;12.1753;16-Mar-2026
+147898;INF846K01V32;INF846K01V24;Axis Income Plus Arbitrage Active FOF - Regular Plan - Annual IDCW;13.8123;16-Mar-2026
+147890;INF846K01V16;-;Axis Income Plus Arbitrage Active FOF - Regular Plan - Growth Option;14.9661;16-Mar-2026
+147897;INF846K01V81;INF846K01V99;Axis Income Plus Arbitrage Active FOF - Regular Plan - Half Yearly IDCW;12.3263;16-Mar-2026
+147888;INF846K01W07;INF846K01W15;Axis Income Plus Arbitrage Active FOF - Regular Plan - IDCW;14.9666;16-Mar-2026
+147896;INF846K01V57;INF846K01V40;Axis Income Plus Arbitrage Active FOF - Regular Plan - Monthly IDCW;14.9653;16-Mar-2026
+147905;INF846K01V73;INF846K01V65;Axis Income Plus Arbitrage Active FOF - Regular Plan - Quarterly IDCW;11.4195;16-Mar-2026
+153924;INF846KA1283;-;Axis Income Plus Arbitrage Passive FOF - Direct Plan - Growth Option;10.1914;16-Mar-2026
+153925;INF846KA1309;INF846KA1325;Axis Income Plus Arbitrage Passive FOF - Direct Plan - IDCW Option;10.1914;16-Mar-2026
+153927;INF846KA1275;-;Axis Income Plus Arbitrage Passive FOF - Regular Plan - Growth Option;10.1789;16-Mar-2026
+153926;INF846KA1291;INF846KA1317;Axis Income Plus Arbitrage Passive FOF - Regular Plan - IDCW Option;10.1792;16-Mar-2026
 149847;INF846K011G9;-;Axis Multi Factor Passive FoF - Direct Plan - Growth Option;14.7920;16-Mar-2026
 149846;INF846K012G7;INF846K013G5;Axis Multi Factor Passive FoF - Direct Plan - IDCW;14.7917;16-Mar-2026
 149844;INF846K014G3;-;Axis Multi Factor Passive FoF - Regular Plan - Growth Option;14.6137;16-Mar-2026
@@ -9881,18 +9881,18 @@ HDFC Mutual Fund
  
 HSBC Mutual Fund
  
-129199;INF336L01HY1;INF336L01HZ8;HSBC Aggressive Hybrid Active FOF - Dividend;29.1741;13-Mar-2026
-129201;INF336L01IB7;INF336L01IC5;HSBC Aggressive Hybrid Active FOF - Dividend Direct;31.2641;13-Mar-2026
-129065;INF336L01IA9;-;HSBC Aggressive Hybrid Active FOF - Growth;37.9606;13-Mar-2026
-129200;INF336L01ID3;-;HSBC Aggressive Hybrid Active FOF - Growth Direct;40.2362;13-Mar-2026
-129195;INF336L01IM4;-;HSBC Income Plus Arbitrage Active FOF - Growth;22.1445;13-Mar-2026
-129197;INF336L01IP7;-;HSBC Income Plus Arbitrage Active FOF - Growth Direct;23.5297;13-Mar-2026
-129198;INF336L01IN2;INF336L01IO0;HSBC Income Plus Arbitrage Active FOF Direct Plan IDCW;19.0586;13-Mar-2026
-129196;INF336L01IK8;INF336L01IL6;HSBC Income Plus Arbitrage Active FOF IDCW;17.3529;13-Mar-2026
-129191;INF336L01IG6;-;HSBC Multi Asset Active FOF - Growth;38.0944;13-Mar-2026
-129193;INF336L01IJ0;-;HSBC Multi Asset Active FOF - Growth Direct;40.6961;13-Mar-2026
-129194;INF336L01IH4;INF336L01II2;HSBC Multi Asset Active FOF Direct Plan IDCW;21.1639;13-Mar-2026
-129192;INF336L01IE1;INF336L01IF8;HSBC Multi Asset Active FOF IDCW;30.2627;13-Mar-2026
+129199;INF336L01HY1;INF336L01HZ8;HSBC Aggressive Hybrid Active FOF - Dividend;29.2605;16-Mar-2026
+129201;INF336L01IB7;INF336L01IC5;HSBC Aggressive Hybrid Active FOF - Dividend Direct;31.3599;16-Mar-2026
+129065;INF336L01IA9;-;HSBC Aggressive Hybrid Active FOF - Growth;38.073;16-Mar-2026
+129200;INF336L01ID3;-;HSBC Aggressive Hybrid Active FOF - Growth Direct;40.3595;16-Mar-2026
+129195;INF336L01IM4;-;HSBC Income Plus Arbitrage Active FOF - Growth;22.1439;16-Mar-2026
+129197;INF336L01IP7;-;HSBC Income Plus Arbitrage Active FOF - Growth Direct;23.5296;16-Mar-2026
+129198;INF336L01IN2;INF336L01IO0;HSBC Income Plus Arbitrage Active FOF Direct Plan IDCW;19.0585;16-Mar-2026
+129196;INF336L01IK8;INF336L01IL6;HSBC Income Plus Arbitrage Active FOF IDCW;17.3524;16-Mar-2026
+129191;INF336L01IG6;-;HSBC Multi Asset Active FOF - Growth;38.0055;16-Mar-2026
+129193;INF336L01IJ0;-;HSBC Multi Asset Active FOF - Growth Direct;40.574;16-Mar-2026
+129194;INF336L01IH4;INF336L01II2;HSBC Multi Asset Active FOF Direct Plan IDCW;21.1004;16-Mar-2026
+129192;INF336L01IE1;INF336L01IF8;HSBC Multi Asset Active FOF IDCW;30.192;16-Mar-2026
  
 ICICI Prudential Mutual Fund
  
@@ -9977,10 +9977,10 @@ Kotak Mahindra Mutual Fund
 150822;INF174KA1KJ2;-;Kotak Income Plus Arbitrage Omni FOF-Direct Plan-Growth;12.8688;16-Mar-2026
 150823;INF174KA1KK0;INF174KA1KL8;Kotak Income Plus Arbitrage Omni FOF-Direct Plan-IDCW;12.869;16-Mar-2026
 150821;INF174KA1KH6;INF174KA1KI4;Kotak Income Plus Arbitrage Omni FOF-Regular Plan-IDCW;12.809;16-Mar-2026
-119777;INF174K01LN3;-;Kotak Multi Asset Omni FOF - Direct Growth - Direct;267.465;13-Mar-2026
-119776;INF174K01LO1;INF174K01LP8;Kotak Multi Asset Omni FOF - Direct Payout of Income Distribution cum capital withdrawal option;262.653;13-Mar-2026
-102574;INF174K01468;-;Kotak Multi Asset Omni FOF - Growth- Regular;247.423;13-Mar-2026
-102573;INF174K01484;INF174K01476;Kotak Multi Asset Omni FOF - Payout of Income Distribution cum capital withdrawal option;240.843;13-Mar-2026
+119777;INF174K01LN3;-;Kotak Multi Asset Omni FOF - Direct Growth - Direct;265.794;16-Mar-2026
+119776;INF174K01LO1;INF174K01LP8;Kotak Multi Asset Omni FOF - Direct Payout of Income Distribution cum capital withdrawal option;261.011;16-Mar-2026
+102574;INF174K01468;-;Kotak Multi Asset Omni FOF - Growth- Regular;245.863;16-Mar-2026
+102573;INF174K01484;INF174K01476;Kotak Multi Asset Omni FOF - Payout of Income Distribution cum capital withdrawal option;239.324;16-Mar-2026
 151603;INF174KA1MQ3;-;Kotak Silver ETF Fund of Fund - Direct Plan - Growth Option;32.6007;16-Mar-2026
 151602;INF174KA1MR1;-;Kotak Silver ETF Fund of Fund - Regular Plan - Growth Option;32.1647;16-Mar-2026
  
@@ -10218,41 +10218,41 @@ Aditya Birla Sun Life Mutual Fund
 132005;INF084M01AZ7;-;Aditya Birla Sun Life Global Excellence Equity Fund Of Fund- Retail Plan - Regular Plan - Growth Option;37.8588;13-Mar-2026
 132010;INF084M01EI5;INF084M01EJ3;Aditya Birla Sun Life Global Excellence Equity Fund Of Fund-DIRECT - RETAIL - IDCW;40.4456;13-Mar-2026
 132003;INF084M01BA8;INF084M01BB6;Aditya Birla Sun Life Global Excellence Equity Fund Of Fund-REGULAR - RETAIL - IDCW;37.8823;13-Mar-2026
-149289;INF209KB19C3;INF209KB10D0;Aditya Birla Sun Life US Equity Passive FOF-Direct IDCW;18.5539;13-Mar-2026
-149291;INF209KB18C5;-;Aditya Birla Sun Life US Equity Passive FOF-Direct-Growth;18.5514;13-Mar-2026
-149290;INF209KB15C1;-;Aditya Birla Sun Life US Equity Passive FOF-Regular Growth;18.2423;13-Mar-2026
-149292;INF209KB16C9;INF209KB17C7;Aditya Birla Sun Life US Equity Passive FOF-Regular IDCW;18.2409;13-Mar-2026
-152140;INF209KB16W7;-;Aditya Birla Sun Life US Treasury 1-3 Year Bond ETFs Fund Of Funds-Direct Growth;12.3657;13-Mar-2026
-152139;INF209KB17W5;INF209KB18W3;Aditya Birla Sun Life US Treasury 1-3 Year Bond ETFs Fund Of Funds-Direct IDCW Payout;12.3656;13-Mar-2026
-152142;INF209KB13W4;-;Aditya Birla Sun Life US Treasury 1-3 Year Bond ETFs Fund Of Funds-Regular Growth;12.3521;13-Mar-2026
-152144;INF209KB14W2;INF209KB15W9;Aditya Birla Sun Life US Treasury 1-3 Year Bond ETFs Fund Of Funds-Regular IDCW;12.3509;13-Mar-2026
-152150;INF209KB12X4;-;Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Direct Growth;12.682;13-Mar-2026
-152145;INF209KB13X2;INF209KB14X0;Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Direct IDCW;12.682;13-Mar-2026
-152147;INF209KB19W1;-;Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Regular Growth;12.6663;13-Mar-2026
-152149;INF209KB10X8;INF209KB11X6;Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Regular IDCW;12.6663;13-Mar-2026
+149289;INF209KB19C3;INF209KB10D0;Aditya Birla Sun Life US Equity Passive FOF-Direct IDCW;18.6914;16-Mar-2026
+149291;INF209KB18C5;-;Aditya Birla Sun Life US Equity Passive FOF-Direct-Growth;18.6889;16-Mar-2026
+149290;INF209KB15C1;-;Aditya Birla Sun Life US Equity Passive FOF-Regular Growth;18.377;16-Mar-2026
+149292;INF209KB16C9;INF209KB17C7;Aditya Birla Sun Life US Equity Passive FOF-Regular IDCW;18.3755;16-Mar-2026
+152140;INF209KB16W7;-;Aditya Birla Sun Life US Treasury 1-3 Year Bond ETFs Fund Of Funds-Direct Growth;12.3712;16-Mar-2026
+152139;INF209KB17W5;INF209KB18W3;Aditya Birla Sun Life US Treasury 1-3 Year Bond ETFs Fund Of Funds-Direct IDCW Payout;12.3712;16-Mar-2026
+152142;INF209KB13W4;-;Aditya Birla Sun Life US Treasury 1-3 Year Bond ETFs Fund Of Funds-Regular Growth;12.3576;16-Mar-2026
+152144;INF209KB14W2;INF209KB15W9;Aditya Birla Sun Life US Treasury 1-3 Year Bond ETFs Fund Of Funds-Regular IDCW;12.3564;16-Mar-2026
+152150;INF209KB12X4;-;Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Direct Growth;12.7021;16-Mar-2026
+152145;INF209KB13X2;INF209KB14X0;Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Direct IDCW;12.7021;16-Mar-2026
+152147;INF209KB19W1;-;Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Regular Growth;12.6863;16-Mar-2026
+152149;INF209KB10X8;INF209KB11X6;Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Regular IDCW;12.6864;16-Mar-2026
  
 Axis Mutual Fund
  
-148485;INF846K01X06;-;Axis Global Equity Alpha Fund of Fund - Direct Plan - Growth Option;23.2698;13-Mar-2026
-148487;INF846K01X14;INF846K01X22;Axis Global Equity Alpha Fund of Fund - Direct Plan - IDCW;23.2644;13-Mar-2026
-148486;INF846K01X30;-;Axis Global Equity Alpha Fund of Fund - Regular Plan - Growth Option;22.0366;13-Mar-2026
-148488;INF846K01X48;INF846K01X55;Axis Global Equity Alpha Fund of Fund - Regular Plan - IDCW;22.0367;13-Mar-2026
-148954;INF846K01Z20;-;Axis Global Innovation Fund of Fund - Direct Plan - Growth;16.38;13-Mar-2026
-148955;INF846K01Z38;INF846K01Z46;Axis Global Innovation Fund of Fund - Direct Plan - IDCW;16.38;13-Mar-2026
-148953;INF846K01Z53;-;Axis Global Innovation Fund of Fund - Regular Plan - Growth;15.60;13-Mar-2026
-148956;INF846K01Z61;INF846K01Z79;Axis Global Innovation Fund of Fund - Regular Plan - IDCW;15.61;13-Mar-2026
-148699;INF846K01Y39;-;Axis Greater China Equity Fund of Fund - Direct Plan - Growth Option;11.28;13-Mar-2026
-148700;INF846K01Y47;INF846K01Y54;Axis Greater China Equity Fund of Fund - Direct Plan - IDCW;11.27;13-Mar-2026
-148701;INF846K01Y62;-;Axis Greater China Equity Fund of Fund - Regular Plan - Growth Option;10.67;13-Mar-2026
-148702;INF846K01Y70;INF846K01Y88;Axis Greater China Equity Fund of Fund - Regular Plan - IDCW;10.67;13-Mar-2026
-150751;INF846K012K9;-;Axis NASDAQ 100 US Specific Equity Passive FOF - Direct Plan - Growth;24.0246;13-Mar-2026
-150749;INF846K013K7;INF846K014K5;Axis NASDAQ 100 US Specific Equity Passive FOF - Direct Plan - IDCW;24.0245;13-Mar-2026
-150750;INF846K015K2;-;Axis NASDAQ 100 US Specific Equity Passive FOF - Regular Plan - Growth;23.7203;13-Mar-2026
-150748;INF846K016K0;INF846K017K8;Axis NASDAQ 100 US Specific Equity Passive FOF - Regular Plan - IDCW;23.7202;13-Mar-2026
-152240;INF846K017T9;-;Axis US Specific Treasury Dynamic Debt Passive FOF - Direct Plan - Growth Option;11.9648;13-Mar-2026
-152241;INF846K018T7;INF846K019T5;Axis US Specific Treasury Dynamic Debt Passive FOF - Direct Plan - IDCW Option;11.9640;13-Mar-2026
-152239;INF846K013T8;-;Axis US Specific Treasury Dynamic Debt Passive FOF - Regular Plan - Growth Option;11.9518;13-Mar-2026
-152238;INF846K014T6;INF846K016T1;Axis US Specific Treasury Dynamic Debt Passive FOF - Regular Plan - IDCW Option;11.9517;13-Mar-2026
+148485;INF846K01X06;-;Axis Global Equity Alpha Fund of Fund - Direct Plan - Growth Option;23.2895;16-Mar-2026
+148487;INF846K01X14;INF846K01X22;Axis Global Equity Alpha Fund of Fund - Direct Plan - IDCW;23.2841;16-Mar-2026
+148486;INF846K01X30;-;Axis Global Equity Alpha Fund of Fund - Regular Plan - Growth Option;22.0538;16-Mar-2026
+148488;INF846K01X48;INF846K01X55;Axis Global Equity Alpha Fund of Fund - Regular Plan - IDCW;22.0539;16-Mar-2026
+148954;INF846K01Z20;-;Axis Global Innovation Fund of Fund - Direct Plan - Growth;16.39;16-Mar-2026
+148955;INF846K01Z38;INF846K01Z46;Axis Global Innovation Fund of Fund - Direct Plan - IDCW;16.39;16-Mar-2026
+148953;INF846K01Z53;-;Axis Global Innovation Fund of Fund - Regular Plan - Growth;15.61;16-Mar-2026
+148956;INF846K01Z61;INF846K01Z79;Axis Global Innovation Fund of Fund - Regular Plan - IDCW;15.62;16-Mar-2026
+148699;INF846K01Y39;-;Axis Greater China Equity Fund of Fund - Direct Plan - Growth Option;11.29;16-Mar-2026
+148700;INF846K01Y47;INF846K01Y54;Axis Greater China Equity Fund of Fund - Direct Plan - IDCW;11.28;16-Mar-2026
+148701;INF846K01Y62;-;Axis Greater China Equity Fund of Fund - Regular Plan - Growth Option;10.68;16-Mar-2026
+148702;INF846K01Y70;INF846K01Y88;Axis Greater China Equity Fund of Fund - Regular Plan - IDCW;10.67;16-Mar-2026
+150751;INF846K012K9;-;Axis NASDAQ 100 US Specific Equity Passive FOF - Direct Plan - Growth;24.1942;16-Mar-2026
+150749;INF846K013K7;INF846K014K5;Axis NASDAQ 100 US Specific Equity Passive FOF - Direct Plan - IDCW;24.1941;16-Mar-2026
+150750;INF846K015K2;-;Axis NASDAQ 100 US Specific Equity Passive FOF - Regular Plan - Growth;23.8871;16-Mar-2026
+150748;INF846K016K0;INF846K017K8;Axis NASDAQ 100 US Specific Equity Passive FOF - Regular Plan - IDCW;23.8870;16-Mar-2026
+152240;INF846K017T9;-;Axis US Specific Treasury Dynamic Debt Passive FOF - Direct Plan - Growth Option;12.0010;16-Mar-2026
+152241;INF846K018T7;INF846K019T5;Axis US Specific Treasury Dynamic Debt Passive FOF - Direct Plan - IDCW Option;12.0002;16-Mar-2026
+152239;INF846K013T8;-;Axis US Specific Treasury Dynamic Debt Passive FOF - Regular Plan - Growth Option;11.9879;16-Mar-2026
+152238;INF846K014T6;INF846K016T1;Axis US Specific Treasury Dynamic Debt Passive FOF - Regular Plan - IDCW Option;11.9878;16-Mar-2026
  
 Bandhan Mutual Fund
  
@@ -10328,22 +10328,22 @@ HDFC Mutual Fund
  
 HSBC Mutual Fund
  
-127073;INF336L01HC7;-;HSBC Asia Pacific (Ex Japan) Dividend Yield Fund - Growth;31.4062;13-Mar-2026
-127071;INF336L01HF0;-;HSBC Asia Pacific (Ex Japan) Dividend Yield Fund - Growth Direct;33.9771;13-Mar-2026
-127072;INF336L01HG8;INF336L01HH6;HSBC Asia Pacific IDCW Yield Fund Direct Plan IDCW;22.0348;13-Mar-2026
-127070;INF336L01HD5;INF336L01HE3;HSBC Asia Pacific IDCW Yield Fund IDCW;22.1011;13-Mar-2026
-120035;INF336L01BY4;-;HSBC Brazil Fund - Growth Direct;11.0664;13-Mar-2026
-115117;INF336L01172;INF336L01180;HSBC Brazil Fund - IDCW;10.0829;13-Mar-2026
-120036;INF336L01BW8;INF336L01BX6;HSBC Brazil Fund - IDCW Direct Plan;11.0569;13-Mar-2026
-115116;INF336L01164;-;HSBC Brazil Fund-Growth;10.0829;13-Mar-2026
-120043;INF336L01CJ3;-;HSBC Global Emerging Market Fund - Growth Direct;31.6625;13-Mar-2026
-107988;INF336L01446;-;HSBC Global Emerging Markets Fund - Growth;28.8683;13-Mar-2026
-107989;INF336L01438;INF336L01420;HSBC Global Emerging Markets Fund - IDCW;21.9635;13-Mar-2026
-120044;INF336L01CH7;INF336L01CI5;HSBC Global Emerging Markets Fund - IDCW Direct Plan;26.8094;13-Mar-2026
-148738;INF336L01PW8;INF336L01PX6;HSBC Global Equity  Climate Change Fund of Fund Direct Plan IDCW;12.2974;13-Mar-2026
-148737;INF336L01PV0;-;HSBC Global Equity Climate Change Fund of Fund - Direct - Growth;12.2974;13-Mar-2026
-148735;INF336L01PY4;-;HSBC Global Equity Climate Change Fund of Fund - Regular - Growth;11.9244;13-Mar-2026
-148736;INF336L01PZ1;INF336L01QA2;HSBC Global Equity Climate Change Fund of Fund IDCW;11.9244;13-Mar-2026
+127073;INF336L01HC7;-;HSBC Asia Pacific (Ex Japan) Dividend Yield Fund - Growth;31.5044;16-Mar-2026
+127071;INF336L01HF0;-;HSBC Asia Pacific (Ex Japan) Dividend Yield Fund - Growth Direct;34.0854;16-Mar-2026
+127072;INF336L01HG8;INF336L01HH6;HSBC Asia Pacific IDCW Yield Fund Direct Plan IDCW;22.1051;16-Mar-2026
+127070;INF336L01HD5;INF336L01HE3;HSBC Asia Pacific IDCW Yield Fund IDCW;22.1702;16-Mar-2026
+120035;INF336L01BY4;-;HSBC Brazil Fund - Growth Direct;11.1481;16-Mar-2026
+115117;INF336L01172;INF336L01180;HSBC Brazil Fund - IDCW;10.1569;16-Mar-2026
+120036;INF336L01BW8;INF336L01BX6;HSBC Brazil Fund - IDCW Direct Plan;11.1384;16-Mar-2026
+115116;INF336L01164;-;HSBC Brazil Fund-Growth;10.1569;16-Mar-2026
+120043;INF336L01CJ3;-;HSBC Global Emerging Market Fund - Growth Direct;31.9043;16-Mar-2026
+107988;INF336L01446;-;HSBC Global Emerging Markets Fund - Growth;29.0865;16-Mar-2026
+107989;INF336L01438;INF336L01420;HSBC Global Emerging Markets Fund - IDCW;22.1296;16-Mar-2026
+120044;INF336L01CH7;INF336L01CI5;HSBC Global Emerging Markets Fund - IDCW Direct Plan;27.0141;16-Mar-2026
+148738;INF336L01PW8;INF336L01PX6;HSBC Global Equity  Climate Change Fund of Fund Direct Plan IDCW;12.395;16-Mar-2026
+148737;INF336L01PV0;-;HSBC Global Equity Climate Change Fund of Fund - Direct - Growth;12.395;16-Mar-2026
+148735;INF336L01PY4;-;HSBC Global Equity Climate Change Fund of Fund - Regular - Growth;12.0185;16-Mar-2026
+148736;INF336L01PZ1;INF336L01QA2;HSBC Global Equity Climate Change Fund of Fund IDCW;12.0185;16-Mar-2026
  
 ICICI Prudential Mutual Fund
  
@@ -10375,24 +10375,24 @@ Invesco Mutual Fund
  
 Kotak Mahindra Mutual Fund
  
-119779;INF174K01LW4;-;Kotak Global Emerging Market overseas Equity Omni FOF - Growth - Direct;35.786;13-Mar-2026
-106442;INF174K01DX9;INF174K01DW1;Kotak Global Emerging Market Overseas Equity Omni FOF - Payout of Income Distribution cum capital withdrawal option;32.895;13-Mar-2026
-119778;INF174K01LX2;INF174K01LY0;Kotak Global Emerging Market Overseas Equity Omni FOF - Payout of Income Distribution cum capital withdrawal option - Direct;35.937;13-Mar-2026
-106441;INF174K01DV3;-;Kotak Global Emerging Market Overseas Equity Omni FOF- Growth;32.893;13-Mar-2026
+119779;INF174K01LW4;-;Kotak Global Emerging Market overseas Equity Omni FOF - Growth - Direct;36.115;16-Mar-2026
+106442;INF174K01DX9;INF174K01DW1;Kotak Global Emerging Market Overseas Equity Omni FOF - Payout of Income Distribution cum capital withdrawal option;33.196;16-Mar-2026
+119778;INF174K01LX2;INF174K01LY0;Kotak Global Emerging Market Overseas Equity Omni FOF - Payout of Income Distribution cum capital withdrawal option - Direct;36.267;16-Mar-2026
+106441;INF174K01DV3;-;Kotak Global Emerging Market Overseas Equity Omni FOF- Growth;33.194;16-Mar-2026
 149058;INF174KA1HE9;INF174KA1HF6;Kotak Global Innovation Overseas Equity Omni FOF - Regular Plan -IDCW Option;12.3498;13-Mar-2026
 149056;INF174KA1HD1;-;Kotak Global Innovation Overseas Equity Omni FOF - Regular Plan-Growth;12.3494;13-Mar-2026
 149060;INF174KA1HH2;INF174KA1HI0;Kotak Global Innovation Overseas Equity Omni FOF- Direct Plan - IDCW Option;13.0471;13-Mar-2026
 149059;INF174KA1HG4;-;Kotak Global Innovation Overseas Equity Omni FOF- Direct Plan -Growth;13.049;13-Mar-2026
-148646;INF174KA1FO2;-;Kotak International REIT Overseas Equity Omni FOF - Direct Plan - Growth;11.5777;13-Mar-2026
-148649;INF174KA1FN4;INF174KA1FP9;Kotak International REIT Overseas Equity Omni FOF - Direct Plan - Payout of Income Distribution cum capital withdrawal option;11.5776;13-Mar-2026
-148645;INF174KA1FL8;-;Kotak International REIT Overseas Equity Omni FOF - Regular Plan - Growth;11.0503;13-Mar-2026
-148647;INF174KA1FK0;INF174KA1FM6;Kotak International REIT Overseas Equity Omni FOF - Regular Plan - Payout of Income Distribution cum capital withdrawal option;11.0505;13-Mar-2026
+148646;INF174KA1FO2;-;Kotak International REIT Overseas Equity Omni FOF - Direct Plan - Growth;11.6205;16-Mar-2026
+148649;INF174KA1FN4;INF174KA1FP9;Kotak International REIT Overseas Equity Omni FOF - Direct Plan - Payout of Income Distribution cum capital withdrawal option;11.6205;16-Mar-2026
+148645;INF174KA1FL8;-;Kotak International REIT Overseas Equity Omni FOF - Regular Plan - Growth;11.0904;16-Mar-2026
+148647;INF174KA1FK0;INF174KA1FM6;Kotak International REIT Overseas Equity Omni FOF - Regular Plan - Payout of Income Distribution cum capital withdrawal option;11.0906;16-Mar-2026
 133832;INF178L01CM3;INF178L01CN1;Kotak US Equity Fund - Direct Plan - Dividend option;20.129;25-Feb-2020
 133831;INF178L01CL5;-;Kotak US Equity Fund - Direct Plan - Growth option;20.131;25-Feb-2020
 133830;INF178L01CJ9;INF178L01CK7;Kotak US Equity Fund - Standard Plan - Dividend option;19.213;25-Feb-2020
 133833;INF178L01CI1;-;Kotak US Equity Fund - Standard Plan - Growth option;19.216;25-Feb-2020
-148661;INF174KA1FR5;-;Kotak US Specific Equity Passive FOF - Regular Plan - Growth;22.4914;13-Mar-2026
-148662;INF174KA1FQ7;-;Kotak US Specific Equity Passive FOF- Direct Plan - Growth;22.9402;13-Mar-2026
+148661;INF174KA1FR5;-;Kotak US Specific Equity Passive FOF - Regular Plan - Growth;22.6555;16-Mar-2026
+148662;INF174KA1FQ7;-;Kotak US Specific Equity Passive FOF- Direct Plan - Growth;23.1084;16-Mar-2026
 133814;INF178L01145;INF178L01137;Kotak World Gold Fund - Standard Plan - Dividend Option;9.28;25-Feb-2020
 133815;INF178L01152;-;Kotak World Gold Fund - Standard Plan - Growth Option;11.199;25-Feb-2020
 133817;INF178L01AM7;INF178L01AN5;Kotak World Gold Fund- Direct Plan- Dividend Option;9.78;25-Feb-2020
@@ -10430,18 +10430,18 @@ Navi Mutual Fund
  
 PGIM India Mutual Fund
  
-138456;INF223J01NL0;-;PGIM India Emerging Markets Equity Fund of Fund - Direct Plan - Growth;23.04;13-Mar-2026
+138456;INF223J01NL0;-;PGIM India Emerging Markets Equity Fund of Fund - Direct Plan - Growth;23.22;16-Mar-2026
 138457;INF223J01NJ4;-;PGIM India Emerging Markets Equity Fund of Fund- Direct Plan - Dividend;9.15;20-Jan-2023
 138454;INF223J01AW4;INF223J01AX2;PGIM India Emerging Markets Equity Fund of Fund- Dividend;11;20-Jan-2023
-138453;INF223J01AY0;-;PGIM India Emerging Markets Equity Fund of Fund- Growth;20.09;13-Mar-2026
+138453;INF223J01AY0;-;PGIM India Emerging Markets Equity Fund of Fund- Growth;20.24;16-Mar-2026
 138525;INF223J01AV6;-;PGIM India Global Equity Opportunities Fund of Fund - Bonus;11.75;04-Jan-2017
 138527;INF223J01NG0;-;PGIM India Global Equity Opportunities Fund of Fund- Direct Plan - Dividend;29.18;20-Jan-2023
-138528;INF223J01NF2;-;PGIM India Global Equity Opportunities Fund of Fund- Direct Plan - Growth;49.17;13-Mar-2026
+138528;INF223J01NF2;-;PGIM India Global Equity Opportunities Fund of Fund- Direct Plan - Growth;49.66;16-Mar-2026
 138524;INF223J01AS2;INF223J01AT0;PGIM India Global Equity Opportunities Fund of Fund- Dividend;22.17;20-Jan-2023
-138523;INF223J01AU8;-;PGIM India Global Equity Opportunities Fund of Fund- Growth;43.18;13-Mar-2026
-149298;INF663L01W63;-;PGIM India Global Select Real Estate Securities Fund of Fund - Direct Plan - Growth Option;12.85;13-Mar-2026
+138523;INF223J01AU8;-;PGIM India Global Equity Opportunities Fund of Fund- Growth;43.61;16-Mar-2026
+149298;INF663L01W63;-;PGIM India Global Select Real Estate Securities Fund of Fund - Direct Plan - Growth Option;13.01;16-Mar-2026
 149300;INF663L01W71;INF663L01W89;PGIM India Global Select Real Estate Securities Fund of Fund - Direct Plan - IDCW Option;9.01;20-Jan-2023
-149299;INF663L01W97;-;PGIM India Global Select Real Estate Securities Fund of Fund - Regular Plan - Growth Option;12.39;13-Mar-2026
+149299;INF663L01W97;-;PGIM India Global Select Real Estate Securities Fund of Fund - Regular Plan - Growth Option;12.55;16-Mar-2026
 149301;INF663L01X05;INF663L01X13;PGIM India Global Select Real Estate Securities Fund of Fund - Regular Plan - IDCW Option;8.93;20-Jan-2023
  
 SBI Mutual Fund

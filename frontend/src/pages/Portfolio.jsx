@@ -3,6 +3,7 @@ import BreadCrumbs from "../../components/BreadCrumbs";
 import GlobalContext from "../templates/GlobalContext";
 import numeral from "numeral";
 import ProgressChart from "./ProgressChart";
+import Loader from "../../components/Loader";
 
 const Portfolio = () => {
   const { api, setSelectedMenuItem, client_pan } = useContext(GlobalContext);
@@ -56,8 +57,16 @@ const Portfolio = () => {
 
   const handleEOD = () => {
     setLoading(true);
-    setLoadingMessage("Fetching EOD data...");
-    fetch(`${api}/mutualfund/data/eod`)
+    let endpoint = api;
+    if (selectedPortfolio === "Stocks") {
+      setLoadingMessage("Fetching EOD data for stocks...");
+      endpoint = `${api}/stocks/data/eod`;
+    } else if (selectedPortfolio === "Mutual Fund") {
+      setLoadingMessage("Fetching EOD data for mutual funds...");
+      endpoint = `${api}/mutualfund/data/eod`;
+    }
+
+    fetch(endpoint)
       .then((response) => response.json())
       .then((data) => {
         setRefresh(!refresh);
@@ -66,8 +75,15 @@ const Portfolio = () => {
 
   const handleHistoricalData = () => {
     setLoading(true);
-    setLoadingMessage("Fetching historical data...");
-    fetch(`${api}/mutualfund/data/historical`)
+    let endpoint = api;
+    if (selectedPortfolio === "Stocks") {
+      setLoadingMessage("Fetching historical data for stocks...");
+      endpoint = `${api}/stocks/data/historical`;
+    } else if (selectedPortfolio === "Mutual Fund") {
+      setLoadingMessage("Fetching historical data for mutual funds...");
+      endpoint = `${api}/mutualfund/data/historical`;
+    }
+    fetch(endpoint)
       .then((response) => response.json())
       .then((data) => {
         setRefresh(!refresh);
@@ -84,26 +100,9 @@ const Portfolio = () => {
     }
   };
 
-  // if (loading) {
-  //   return (
-  //     <div className="fixed inset-0 flex flex-col items-center justify-center bg-black/1 backdrop-blur-xs z-50">
-  //       <div className="flex items-center justify-center h-full">
-  //         <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-cyan-900"></div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
-
   return (
     <div className="flex flex-col w-full px-4 mx-auto h-full min-h-0">
-      {loading && (
-        <div className="fixed inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-xs z-50">
-          <div className="flex flex-col gap-4 items-center justify-center h-full">
-            <span>{loadingMessage}</span>
-            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-cyan-900"></div>
-          </div>
-        </div>
-      )}
+      {loading && <Loader message={loadingMessage} />}
       <input
         type="file"
         ref={fileInputRef}

@@ -6715,14 +6715,14 @@ ICICI Prudential Mutual Fund
 146949;INF109KC1YF9;-;ICICI Prudential Bharat Consumption Fund - Direct Plan - IDCW Option;15.49;16-Mar-2026
 146950;INF109KC1YA0;-;ICICI Prudential Bharat Consumption Fund - Growth Option;22.33;16-Mar-2026
 146952;INF109KC1YC6;-;ICICI Prudential Bharat Consumption Fund - IDCW Option;13.87;16-Mar-2026
-148651;INF109KC1P24;-;ICICI Prudential Business Cycle Fund Direct Plan Growth;24.73;13-Mar-2026
-148652;INF109KC1P40;INF109KC1P32;ICICI Prudential Business Cycle Fund Direct Plan IDCW;18.00;13-Mar-2026
-148653;INF109KC1O90;-;ICICI Prudential Business Cycle Fund Growth;23.27;13-Mar-2026
-148654;INF109KC1P16;INF109KC1P08;ICICI Prudential Business Cycle Fund IDCW;16.64;13-Mar-2026
-147662;INF109KC1F91;-;ICICI Prudential Commodities Fund - Direct Plan - Growth Option;47.03;13-Mar-2026
-147664;INF109KC1G09;-;ICICI Prudential Commodities Fund - Direct Plan - IDCW Option;31.18;13-Mar-2026
-147661;INF109KC1F67;-;ICICI Prudential Commodities Fund - Growth Option;43.28;13-Mar-2026
-147663;INF109KC1F75;-;ICICI Prudential Commodities Fund - IDCW Option;27.82;13-Mar-2026
+148651;INF109KC1P24;-;ICICI Prudential Business Cycle Fund Direct Plan Growth;24.90;16-Mar-2026
+148652;INF109KC1P40;INF109KC1P32;ICICI Prudential Business Cycle Fund Direct Plan IDCW;18.13;16-Mar-2026
+148653;INF109KC1O90;-;ICICI Prudential Business Cycle Fund Growth;23.43;16-Mar-2026
+148654;INF109KC1P16;INF109KC1P08;ICICI Prudential Business Cycle Fund IDCW;16.75;16-Mar-2026
+147662;INF109KC1F91;-;ICICI Prudential Commodities Fund - Direct Plan - Growth Option;46.94;16-Mar-2026
+147664;INF109KC1G09;-;ICICI Prudential Commodities Fund - Direct Plan - IDCW Option;31.12;16-Mar-2026
+147661;INF109KC1F67;-;ICICI Prudential Commodities Fund - Growth Option;43.19;16-Mar-2026
+147663;INF109KC1F75;-;ICICI Prudential Commodities Fund - IDCW Option;27.77;16-Mar-2026
 153867;INF109K1A427;-;ICICI Prudential Conglomerate Fund - Direct Plan - Growth;9.30;16-Mar-2026
 153866;INF109K1A443;INF109K1A435;ICICI Prudential Conglomerate Fund - Direct Plan - IDCW;9.30;16-Mar-2026
 153865;INF109K1A393;-;ICICI Prudential Conglomerate Fund - Growth;9.26;16-Mar-2026
@@ -6743,10 +6743,10 @@ ICICI Prudential Mutual Fund
 120687;INF109K01W09;INF109K01W17;ICICI Prudential Exports & Services Fund - Direct Plan - IDCW;71.27;16-Mar-2026
 103312;INF109K01BB5;-;ICICI Prudential Exports & Services Fund - Growth;153.25;16-Mar-2026
 103313;INF109K01FL5;INF109K01BA7;ICICI Prudential Exports & Services Fund - IDCW;34.54;16-Mar-2026
-120587;INF109K01Z14;-;ICICI Prudential FMCG Fund - Direct Plan -  Growth;454.11;13-Mar-2026
-120588;INF109K01Y98;INF109K01Z06;ICICI Prudential FMCG Fund - Direct Plan -  IDCW;149.09;13-Mar-2026
-100352;INF109K01415;-;ICICI Prudential FMCG Fund - Growth;409.65;13-Mar-2026
-100351;INF109K01EO2;INF109K01423;ICICI Prudential FMCG Fund - IDCW;75.71;13-Mar-2026
+120587;INF109K01Z14;-;ICICI Prudential FMCG Fund - Direct Plan -  Growth;457.37;16-Mar-2026
+120588;INF109K01Y98;INF109K01Z06;ICICI Prudential FMCG Fund - Direct Plan -  IDCW;150.16;16-Mar-2026
+100352;INF109K01415;-;ICICI Prudential FMCG Fund - Growth;412.56;16-Mar-2026
+100351;INF109K01EO2;INF109K01423;ICICI Prudential FMCG Fund - IDCW;76.25;16-Mar-2026
 150310;INF109KC10C2;-;ICICI PRUDENTIAL HOUSING OPPORTUNITIES FUND - Direct Plan Growth;16.88;16-Mar-2026
 150311;INF109KC11C0;INF109KC12C8;ICICI PRUDENTIAL HOUSING OPPORTUNITIES FUND - Direct Plan IDCW;14.31;16-Mar-2026
 150308;INF109KC17B9;-;ICICI PRUDENTIAL HOUSING OPPORTUNITIES FUND - Growth;16.09;16-Mar-2026
@@ -6759,18 +6759,18 @@ ICICI Prudential Mutual Fund
 120622;INF109K016M8;INF109K017M6;ICICI Prudential Infrastructure Fund - Direct Plan -  IDCW;43.37;16-Mar-2026
 103149;INF109K01AV5;-;ICICI Prudential Infrastructure Fund - Growth;182.11;16-Mar-2026
 103150;INF109K01FB6;INF109K01AT9;ICICI Prudential Infrastructure Fund - IDCW;25.64;16-Mar-2026
-151580;INF109KC12T2;-;ICICI Prudential Innovation Fund - Direct Plan - Growth;17.55;13-Mar-2026
-151578;INF109KC13T0;INF109KC14T8;ICICI Prudential Innovation Fund - Direct Plan - IDCW;14.86;13-Mar-2026
-151579;INF109KC19S9;-;ICICI Prudential Innovation Fund - Growth;16.98;13-Mar-2026
-151581;INF109KC10T6;INF109KC11T4;ICICI Prudential Innovation Fund - IDCW;14.31;13-Mar-2026
+151580;INF109KC12T2;-;ICICI Prudential Innovation Fund - Direct Plan - Growth;17.57;16-Mar-2026
+151578;INF109KC13T0;INF109KC14T8;ICICI Prudential Innovation Fund - Direct Plan - IDCW;14.88;16-Mar-2026
+151579;INF109KC19S9;-;ICICI Prudential Innovation Fund - Growth;16.99;16-Mar-2026
+151581;INF109KC10T6;INF109KC11T4;ICICI Prudential Innovation Fund - IDCW;14.32;16-Mar-2026
 145077;INF109KC1LG4;-;ICICI Prudential Manufacturing Fund - Cumulative Option;34.08;16-Mar-2026
 145075;INF109KC1LJ8;-;ICICI Prudential Manufacturing Fund - Direct Plan - Cumulative Option;36.95;16-Mar-2026
 145076;INF109KC1LK6;-;ICICI Prudential Manufacturing Fund - Direct Plan - IDCW Option;23.97;16-Mar-2026
 145078;INF109KC1LH2;-;ICICI Prudential Manufacturing Fund - IDCW Option;21.49;16-Mar-2026
-147346;INF109KC1D93;-;ICICI Prudential MNC Fund - Direct Plan - Growth Option;29.72;13-Mar-2026
-147347;INF109KC1E01;-;ICICI Prudential MNC Fund - Direct Plan - IDCW Option;17.82;13-Mar-2026
-147345;INF109KC1D69;-;ICICI Prudential MNC Fund - Growth Option;27.27;13-Mar-2026
-147348;INF109KC1D77;-;ICICI Prudential MNC Fund - IDCW Option;15.74;13-Mar-2026
+147346;INF109KC1D93;-;ICICI Prudential MNC Fund - Direct Plan - Growth Option;29.65;16-Mar-2026
+147347;INF109KC1E01;-;ICICI Prudential MNC Fund - Direct Plan - IDCW Option;17.78;16-Mar-2026
+147345;INF109KC1D69;-;ICICI Prudential MNC Fund - Growth Option;27.20;16-Mar-2026
+147348;INF109KC1D77;-;ICICI Prudential MNC Fund - IDCW Option;15.70;16-Mar-2026
 143873;INF109KC1GE9;-;ICICI Prudential Pharma Healthcare and Diagnostics (P.H.D) Fund - Cumulative Option;37.22;16-Mar-2026
 143874;INF109KC1GH2;-;ICICI Prudential Pharma Healthcare and Diagnostics (P.H.D) Fund - Direct Plan - Cumulative Option;40.32;16-Mar-2026
 143876;INF109KC1GJ8;-;ICICI Prudential Pharma Healthcare and Diagnostics (P.H.D) Fund - Direct Plan - IDCW Option;24.35;16-Mar-2026
@@ -6791,10 +6791,10 @@ ICICI Prudential Mutual Fund
 153182;INF109KC14Z5;INF109KC13Z7;ICICI Prudential Rural Opportunities Fund - Direct Plan - IDCW;10.72;16-Mar-2026
 153181;INF109KC19Y7;-;ICICI Prudential Rural Opportunities Fund - Growth;10.58;16-Mar-2026
 153183;INF109KC11Z1;INF109KC10Z3;ICICI Prudential Rural Opportunities Fund - IDCW;10.58;16-Mar-2026
-120594;INF109K01Z48;-;ICICI Prudential Technology Fund - Direct Plan -  Growth;182.66;13-Mar-2026
-120595;INF109K01Z22;INF109K01Z30;ICICI Prudential Technology Fund - Direct Plan -  IDCW;111.51;13-Mar-2026
-100363;INF109K01506;-;ICICI Prudential Technology Fund - Growth;163.49;13-Mar-2026
-115294;INF109K01FO9;INF109K01514;ICICI Prudential Technology Fund - IDCW;51.06;13-Mar-2026
+120594;INF109K01Z48;-;ICICI Prudential Technology Fund - Direct Plan -  Growth;182.06;16-Mar-2026
+120595;INF109K01Z22;INF109K01Z30;ICICI Prudential Technology Fund - Direct Plan -  IDCW;111.15;16-Mar-2026
+100363;INF109K01506;-;ICICI Prudential Technology Fund - Growth;162.94;16-Mar-2026
+115294;INF109K01FO9;INF109K01514;ICICI Prudential Technology Fund - IDCW;50.88;16-Mar-2026
 150685;INF109KC12K1;-;ICICI PRUDENTIAL TRANSPORTATION AND LOGISTICS FUND - Direct Plan - Growth;19.25;16-Mar-2026
 150687;INF109KC13K9;INF109KC14K7;ICICI PRUDENTIAL TRANSPORTATION AND LOGISTICS FUND - Direct Plan - IDCW;16.42;16-Mar-2026
 150684;INF109KC19J8;-;ICICI PRUDENTIAL TRANSPORTATION AND LOGISTICS FUND - Growth;18.45;16-Mar-2026
@@ -7099,10 +7099,10 @@ Nippon India Mutual Fund
 149327;INF204KC1311;INF204KC1329;Nippon India Taiwan Equity Fund- Direct Plan- IDCW option;24.8439;16-Mar-2026
 149328;INF204KC1279;-;Nippon India Taiwan Equity fund- Regular Plan- Growth Option;23.3459;16-Mar-2026
 149325;INF204KC1287;INF204KC1295;Nippon India Taiwan Equity Fund- Regular Plan- IDCW option;23.3459;16-Mar-2026
-134925;INF204KA16G3;INF204KA17G1;NIPPON INDIA - US EQUITY OPPORTUNITIES FUND - Direct Plan - IDCW Option;40.2253;13-Mar-2026
-134924;INF204KA13G0;INF204KA14G8;NIPPON INDIA - US EQUITY OPPORTUNITIES FUND - IDCW Option;35.7864;13-Mar-2026
-134923;INF204KA15G5;-;Nippon India US Equity Opportunities Fund- Direct Plan- Growth Plan- Growth Option;40.2253;13-Mar-2026
-134922;INF204KA12G2;-;Nippon India US Equity Opportunities Fund- Growth Plan- Growth Option;35.7864;13-Mar-2026
+134925;INF204KA16G3;INF204KA17G1;NIPPON INDIA - US EQUITY OPPORTUNITIES FUND - Direct Plan - IDCW Option;40.4980;16-Mar-2026
+134924;INF204KA13G0;INF204KA14G8;NIPPON INDIA - US EQUITY OPPORTUNITIES FUND - IDCW Option;36.0257;16-Mar-2026
+134923;INF204KA15G5;-;Nippon India US Equity Opportunities Fund- Direct Plan- Growth Plan- Growth Option;40.4980;16-Mar-2026
+134922;INF204KA12G2;-;Nippon India US Equity Opportunities Fund- Growth Plan- Growth Option;36.0257;16-Mar-2026
  
 PGIM India Mutual Fund
  
@@ -9165,10 +9165,10 @@ Open Ended Schemes(Hybrid Scheme - Multi Asset Allocation)
  
 360 ONE Mutual Fund
  
-153774;INF579M01BM2;-;360 ONE Multi Asset Allocation Fund - Direct Plan - Growth;11.9823;13-Mar-2026
-153773;INF579M01BN0;INF579M01BO8;360 ONE Multi Asset Allocation Fund - Direct Plan - IDCW;11.9823;13-Mar-2026
-153772;INF579M01BJ8;-;360 ONE Multi Asset Allocation Fund - Regular Plan - Growth;11.8747;13-Mar-2026
-153775;INF579M01BK6;INF579M01BL4;360 ONE Multi Asset Allocation Fund - Regular Plan - IDCW;11.8747;13-Mar-2026
+153774;INF579M01BM2;-;360 ONE Multi Asset Allocation Fund - Direct Plan - Growth;11.9263;16-Mar-2026
+153773;INF579M01BN0;INF579M01BO8;360 ONE Multi Asset Allocation Fund - Direct Plan - IDCW;11.9263;16-Mar-2026
+153772;INF579M01BJ8;-;360 ONE Multi Asset Allocation Fund - Regular Plan - Growth;11.8176;16-Mar-2026
+153775;INF579M01BK6;INF579M01BL4;360 ONE Multi Asset Allocation Fund - Regular Plan - IDCW;11.8176;16-Mar-2026
  
 Aditya Birla Sun Life Mutual Fund
  
@@ -9263,10 +9263,10 @@ HSBC Mutual Fund
  
 ICICI Prudential Mutual Fund
  
-120334;INF109K015K4;-;ICICI Prudential Multi-Asset Fund - Direct Plan - Growth;863.6359;13-Mar-2026
-120335;INF109K013K9;INF109K014K7;ICICI Prudential Multi-Asset Fund - Direct Plan - IDCW;57.8994;13-Mar-2026
-101144;INF109K01761;-;ICICI Prudential Multi-Asset Fund - Growth;781.3477;13-Mar-2026
-101143;INF109K01ED5;INF109K01779;ICICI Prudential Multi-Asset Fund - IDCW;34.0283;13-Mar-2026
+120334;INF109K015K4;-;ICICI Prudential Multi-Asset Fund - Direct Plan - Growth;864.4752;16-Mar-2026
+120335;INF109K013K9;INF109K014K7;ICICI Prudential Multi-Asset Fund - Direct Plan - IDCW;57.9557;16-Mar-2026
+101144;INF109K01761;-;ICICI Prudential Multi-Asset Fund - Growth;782.0640;16-Mar-2026
+101143;INF109K01ED5;INF109K01779;ICICI Prudential Multi-Asset Fund - IDCW;34.0595;16-Mar-2026
 115269;INF109K01TN2;-;ICICI Prudential Multi-Asset Fund- Institutional Growth Option;22.849;24-Apr-2020
 104898;INF109K01787;-;ICICI Prudential Multi-Asset Fund-Institutional Option - I;43.0129;18-Jun-2018
  
@@ -9307,10 +9307,10 @@ Mirae Asset Mutual Fund
  
 Nippon India Mutual Fund
  
-148457;INF204KB19V4;-;Nippon India Multi Asset Allocation Fund - Direct Plan - Growth Option;25.3517;13-Mar-2026
-148458;INF204KB10W1;INF204KB11W9;NIPPON INDIA MULTI ASSET ALLOCATION FUND - DIRECT Plan - IDCW Option;24.9159;13-Mar-2026
-148460;INF204KB17V8;INF204KB18V6;NIPPON INDIA MULTI ASSET ALLOCATION FUND - IDCW Option;23.0992;13-Mar-2026
-148459;INF204KB16V0;-;Nippon India Multi Asset Allocation Fund - Regular Plan - Growth Option;23.5348;13-Mar-2026
+148457;INF204KB19V4;-;Nippon India Multi Asset Allocation Fund - Direct Plan - Growth Option;25.3254;16-Mar-2026
+148458;INF204KB10W1;INF204KB11W9;NIPPON INDIA MULTI ASSET ALLOCATION FUND - DIRECT Plan - IDCW Option;24.8901;16-Mar-2026
+148460;INF204KB17V8;INF204KB18V6;NIPPON INDIA MULTI ASSET ALLOCATION FUND - IDCW Option;23.0733;16-Mar-2026
+148459;INF204KB16V0;-;Nippon India Multi Asset Allocation Fund - Regular Plan - Growth Option;23.5084;16-Mar-2026
  
 PGIM India Mutual Fund
  

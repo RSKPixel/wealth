@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import BreadCrumbs from "../../components/BreadCrumbs";
 import GlobalContext from "../templates/GlobalContext";
 import numeral from "numeral";
 import ProgressChart from "./ProgressChart";
-import Loader from "../../components/Loader";
-import { data } from "react-router-dom";
+import Loader from "../components/Loader";
+import BreadCrumbs from "../components/BreadCrumbs";
 
 const Portfolio = () => {
   const { api, setSelectedMenuItem, client_pan } = useContext(GlobalContext);
@@ -141,7 +140,7 @@ const Portfolio = () => {
 
       <div className="flex flex-col h-full min-h-0">
         <div className="bg-cyan-950/20 border-cyan-800 border text-gray-300 flex flex-col rounded-lg mb-4">
-          <div className="p-1 flex flex-row gap-4 border-b border-cyan-800 bg-cyan-700/40">
+          <div className="p-1 pe-4 flex flex-row gap-4 border-b border-cyan-800 bg-cyan-700/40">
             <span className="ms-auto"></span>
             {portfolio.map((p) => (
               <span

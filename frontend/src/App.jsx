@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import GlobalContext from "./templates/GlobalContext";
 import Basetemplate from "./templates/Basetemplate";
-import MutualFunds from "./pages/MutualFunds";
 import Portfolio from "./pages/Portfolio";
 
 function App() {
@@ -32,7 +31,6 @@ function App() {
         <Basetemplate>
           <Routes>
             <Route path="/" element={<Portfolio />} />
-            <Route path="/mutualfunds" element={<MutualFunds />} />
           </Routes>
         </Basetemplate>
       </GlobalContext.Provider>

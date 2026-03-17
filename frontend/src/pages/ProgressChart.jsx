@@ -32,7 +32,6 @@ const ProgressChart = ({ data }) => {
   const { api, client_pan } = useContext(GlobalContext);
   const [chartData, setChartData] = useState({});
   const [assetAllocationData, setAssetAllocationData] = useState({});
-  // const [loading, setLoading] = useState(true);
   const charts = [
     "Equity Curve",
     "Investment Progress",
@@ -208,16 +207,6 @@ const ProgressChart = ({ data }) => {
     setAssetAllocationData(ac);
     setChartData(cd);
   }, [data]);
-
-  // if (loading) {
-  //   return (
-  //     <div className="bg-cyan-950/20 h-96 flex flex-col items-center justify-center border-cyan-800 border text-gray-300 rounded-lg cursor-pointer">
-  //       <p>Loading Chart...</p>
-  //       <br />
-  //       <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-cyan-900"></div>
-  //     </div>
-  //   );
-  // }
 
   return (
     <div className="flex flex-col bg-cyan-950/20 border-cyan-800 border text-gray-300 rounded-lg cursor-pointer">

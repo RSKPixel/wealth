@@ -22,6 +22,9 @@ const Portfolio = () => {
 
   useEffect(() => {
     setLoading(true);
+    setProgressData({});
+    setHoldings([]);
+    setSummary({});
     setLoadingMessage("Loading portfolio data...");
     setSelectedMenuItem("Portfolio");
 
@@ -59,7 +62,6 @@ const Portfolio = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setRefresh(!refresh);
       });
   };
@@ -190,7 +192,7 @@ const Portfolio = () => {
           </div>
         </div>
         <div className="flex flex-col mb-4 w-full">
-          <ProgressChart data={progressData} />
+          {!loading && <ProgressChart data={progressData} />}
         </div>
         <div className="grid grid-cols-3 gap-4">
           {holdings.length === 0 && (

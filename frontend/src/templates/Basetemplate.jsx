@@ -5,10 +5,7 @@ import GlobalContext from "./GlobalContext";
 const Basetemplate = ({ children }) => {
   const { api, selectedMenuItem, loggedIn } = useContext(GlobalContext);
   const menuItems = [
-    { name: "Dashboard", link: "/" },
-    { name: "Mutual Funds", link: "/mutualfunds" },
-    { name: "Stocks", link: "/stocks" },
-    { name: "Data", link: "/data" },
+    { name: "Portfolio", link: "/" },
     { name: "User", link: "/client-master" },
   ];
   return (

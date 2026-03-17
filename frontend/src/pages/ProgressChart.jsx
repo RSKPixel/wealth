@@ -28,11 +28,11 @@ ChartJS.register(
 
 import moment from "moment";
 
-const ProgressChart = () => {
+const ProgressChart = ({ selectedPortfolio }) => {
   const { api, client_pan } = useContext(GlobalContext);
   const [chartData, setChartData] = useState({});
   const [assetAllocationData, setAssetAllocationData] = useState({});
-  const [assetClassData, setAssetClassData] = useState({});
+  // const [assetClassData, setAssetClassData] = useState({});
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const charts = [
@@ -58,22 +58,26 @@ const ProgressChart = () => {
   useEffect(() => {
     const fd = new FormData();
     fd.append("client_pan", client_pan);
-    fd.append("portfolio", "Mutual Fund");
+    fd.append("portfolio", selectedPortfolio);
     fetch(`${api}/wealth/portfolio-progress`, {
       method: "POST",
       body: fd,
     })
       .then((response) => response.json())
       .then((data) => {
-        setData(data.data.progress);
-        setAssetClassData(data.data.asset_allocation);
+        setData(data.data);
       });
-  }, [api, client_pan]);
+  }, [api, client_pan, selectedPortfolio]);
 
   useEffect(() => {
     if (data.length === 0) return;
 
-    const filteredData = data.slice(-period[selectedPeriod] || data.length);
+    const filteredData = data.progress.slice(
+      -period[selectedPeriod] || data.length,
+    );
+    const assetClassData = data.asset_allocation;
+    const progressAc = data.progress_ac;
+
     const lables = filteredData.map((item, index, arr) => {
       const m = moment(item.date);
       const prev = index > 0 ? moment(arr[index - 1].date) : null;
@@ -177,14 +181,33 @@ const ProgressChart = () => {
           },
         ],
       };
+    } else if (selectedChart === "Holding %") {
+      cd = {
+        labels: lables,
+        datasets: [
+          {
+            label: "Holding %",
+            data: progressAc.map((d) => d.cv_percentage),
+            borderColor: "rgba(255, 206, 86, 1)",
+            backgroundColor: "rgba(255, 206, 86, 0.2)",
+            fill: false,
+            borderWidth: 1,
+            tension: 0.1,
+            pointRadius: 1,
+            pointHoverRadius: 10,
+            pointHoverBackgroundColor: "rgba(54, 162, 235, 1)",
+            pointHoverBorderColor: "rgba(54, 162, 235, 1)",
+          },
+        ],
+      };
     }
 
     const ac = {
-      labels: assetClassData.map((d) => d.asset_class),
+      labels: assetClassData.map((d) => `${d.asset_class} (${d.cvp}%)`),
       datasets: [
         {
           label: "Asset Allocation",
-          data: assetClassData.map((d) => d.hvp),
+          data: assetClassData.map((d) => d.cvp),
           backgroundColor: [
             "#3b82f6", // Equity
             "#10b981", // Debt
@@ -200,7 +223,7 @@ const ProgressChart = () => {
     setAssetAllocationData(ac);
     setChartData(cd);
     setLoading(false);
-  }, [data, assetClassData, selectedPeriod, selectedChart]);
+  }, [data, selectedPeriod, selectedChart]);
 
   if (loading) {
     return (

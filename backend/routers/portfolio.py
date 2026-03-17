@@ -22,10 +22,21 @@ def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
     progress = pd.DataFrame(
         columns=["date", "invested_value", "current_value", "pl", "plp"]
     )
+    progrss_ac = pd.DataFrame(
+        columns=[
+            "date",
+            "asset_class",
+            "invested_value",
+            "current_value",
+            "iv_percentage",
+            "cv_percentage",
+        ]
+    )
     for tdate in range:
         sql = text(
             f"""
                 SELECT
+                    eod.asset_class,
                     transactions.instrument,
                     transactions.instrument_name,
                     CAST(SUM(holding_value) AS NUMERIC(14,2)) AS invested_value,
@@ -39,17 +50,25 @@ def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
                 ON
                     historical.date = '{tdate}' AND
                     transactions.instrument = historical.instrument
+                INNER JOIN
+                    eod
+                ON
+                    transactions.instrument = eod.instrument
                 WHERE
-                    transactions.transaction_date <= '{tdate}'
+                    transactions.transaction_date <= '{tdate}' AND
+                    (:portfolio = "All" OR portfolio = :portfolio) AND
+                    client_pan = :client_pan
                 GROUP BY
                     transactions.instrument,
                     transactions.instrument_name,
-                    historical.close_price
+                    historical.close_price,
+                    eod.asset_class
                 HAVING SUM(balance_quantity) > 0
             """
         )
         with engine.connect() as connection:
-            result = connection.execute(sql)
+            params = {"portfolio": portfolio, "client_pan": client_pan}
+            result = connection.execute(sql, params)
             df = pd.DataFrame(result.fetchall(), columns=result.keys())
 
         numeric_cols = [
@@ -70,10 +89,41 @@ def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
         grouped["pl"] = round(grouped["current_value"] - grouped["invested_value"], 2)
         grouped["plp"] = round((grouped["pl"] / grouped["invested_value"]) * 100, 2)
 
+        grouped_ac = (
+            df.groupby(["date", "asset_class"])
+            .agg({"invested_value": "sum", "current_value": "sum"})
+            .reset_index()
+        )
+
+        grouped_ac["iv_percentage"] = round(
+            (
+                grouped_ac["invested_value"]
+                / grouped_ac.groupby("date")["invested_value"].transform("sum")
+            )
+            * 100,
+            2,
+        )
+        grouped_ac["cv_percentage"] = round(
+            (
+                grouped_ac["current_value"]
+                / grouped_ac.groupby("date")["current_value"].transform("sum")
+            )
+            * 100,
+            2,
+        )
+
+        grouped_ac_pivot = grouped_ac.pivot(
+            index="date",
+            columns="asset_class",
+            values=["iv_percentage", "cv_percentage"],
+        )
+
         if progress.empty:
             progress = grouped
+            # progress = progress.merge(grouped_ac_pivot, on="date", how="left")
         else:
             progress = pd.concat([progress, grouped], ignore_index=True)
+            # progress = progress.merge(grouped_ac_pivot, on="date", how="left")
 
     progress.sort_values(by="date", inplace=True)
     progress["peak"] = progress["plp"].cummax()
@@ -91,6 +141,7 @@ def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
         FROM
             portfolio
         WHERE
+            (:portfolio = 'All' OR portfolio = :portfolio) AND
             client_pan=:client_pan
         GROUP BY asset_class;
         """
@@ -112,6 +163,7 @@ def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
     asset_allocation["cvp"] = round(
         (asset_allocation["current_value"] / total_current_value) * 100, 2
     )
+    asset_allocation.sort_values(by="cvp", ascending=False, inplace=True)
 
     return {
         "status": "success",
@@ -119,6 +171,7 @@ def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
         "data": {
             "progress": progress.to_dict(orient="records"),
             "asset_allocation": asset_allocation.to_dict(orient="records"),
+            "progress_ac": progrss_ac.to_dict(orient="records"),
         },
     }
 

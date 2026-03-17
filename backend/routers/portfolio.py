@@ -339,7 +339,7 @@ def holdings(client_pan: str, portfolio: str):
     if portfolio != "All":
         df = df[df["portfolio"] == portfolio]
 
-    df.sort_values(by="current_value", ascending=False, inplace=True)
+    df.sort_values(by="xirr", ascending=False, inplace=True)
     summary = portfolio_summary(client_pan, portfolio)
 
     return df.to_dict(orient="records"), summary

@@ -51,6 +51,26 @@ const ProgressChart = ({ data }) => {
 
   const [selectedChart, setSelectedChart] = useState("Equity Curve");
   const [selectedPeriod, setSelectedPeriod] = useState("5Y");
+  const optionsDoughnut = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: "right",
+        labels: {
+          color: "#ccc",
+          font: {
+            size: 16,
+          },
+        },
+      },
+    },
+  };
+
+  const optionsLine = {
+    responsive: true,
+    maintainAspectRatio: false,
+  };
 
   useEffect(() => {
     if (!data || !data.progress || data.progress.length === 0) {
@@ -206,7 +226,7 @@ const ProgressChart = ({ data }) => {
 
     setAssetAllocationData(ac);
     setChartData(cd);
-  }, [data]);
+  }, [data, selectedChart, selectedPeriod]);
 
   return (
     <div className="flex flex-col bg-cyan-950/20 border-cyan-800 border text-gray-300 rounded-lg cursor-pointer">
@@ -241,13 +261,13 @@ const ProgressChart = ({ data }) => {
             <Line
               data={chartData}
               style={{ maxWidth: "100%", maxHeight: "100%" }}
-              options={{ responsive: true, maintainAspectRatio: false }}
+              options={optionsLine}
             />
           ) : (
             <p>No data available</p>
           )}
         </div>
-        <div className="pb-4 items-center justify-center flex">
+        <div className="pb-4 pt-4 items-center justify-center flex">
           {assetAllocationData &&
           assetAllocationData["datasets"] &&
           assetAllocationData["datasets"][0] &&
@@ -256,7 +276,7 @@ const ProgressChart = ({ data }) => {
             <Doughnut
               data={assetAllocationData}
               style={{ maxWidth: "100%", maxHeight: "100%" }}
-              options={{ responsive: true, maintainAspectRatio: false }}
+              options={optionsDoughnut}
             />
           ) : (
             <p>No data available</p>

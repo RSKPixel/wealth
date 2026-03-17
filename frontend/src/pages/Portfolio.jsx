@@ -17,6 +17,7 @@ const Portfolio = () => {
   const [loadingMessage, setLoadingMessage] = useState("");
   const [fvCycles, setFvCycles] = useState(5);
   const [data, setData] = useState([]);
+  const [progressData, setProgressData] = useState({});
   const fileInputRef = useRef(null);
 
   useEffect(() => {
@@ -36,27 +37,14 @@ const Portfolio = () => {
       .then((data) => {
         setHoldings(data.data.holdings);
         setSummary(data.data.summary);
-        // setData([]);
+        setProgressData({
+          progress: data.data.progress,
+          asset_allocation: data.data.asset_allocation,
+          progress_ac: data.data.progress_ac,
+        });
         setLoading(false);
       });
   }, [refresh, selectedPortfolio]);
-
-  useEffect(() => {
-    setLoading(true);
-    setLoadingMessage("Loading chart data...");
-    const fd = new FormData();
-    fd.append("client_pan", client_pan);
-    fd.append("portfolio", selectedPortfolio);
-    fetch(`${api}/wealth/portfolio-progress`, {
-      method: "POST",
-      body: fd,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data.data);
-        setLoading(false);
-      });
-  }, [data]);
 
   const handleUpload = (event) => {
     const file = event.target.files[0];
@@ -202,13 +190,7 @@ const Portfolio = () => {
           </div>
         </div>
         <div className="flex flex-col mb-4 w-full">
-          <ProgressChart
-            data={data}
-            selectedPortfolio={selectedPortfolio}
-            setLoading={setLoading}
-            setLoadingMessage={setLoadingMessage}
-            loading={loading}
-          />
+          <ProgressChart data={progressData} />
         </div>
         <div className="grid grid-cols-3 gap-4">
           {holdings.length === 0 && (

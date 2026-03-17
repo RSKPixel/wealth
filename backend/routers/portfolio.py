@@ -11,8 +11,28 @@ from sqlalchemy.orm import sessionmaker
 router = APIRouter()
 
 
-@router.post("/portfolio-progress")
-def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
+@router.post("/portfolio")
+def portfolio(client_pan: str = Form(...), portfolio: str = Form(...)):
+
+    holdings_data, summary_data = holdings(client_pan, portfolio)
+    (progress_data, asset_allocation_data, progress_ac_data) = progress(
+        client_pan, portfolio
+    )
+
+    return {
+        "status": "success",
+        "message": "Portfolio data fetched successfully",
+        "data": {
+            "holdings": holdings_data,
+            "summary": summary_data,
+            "progress": progress_data,
+            "asset_allocation": asset_allocation_data,
+            "progress_ac": progress_ac_data,
+        },
+    }
+
+
+def progress(client_pan: str, portfolio: str):
 
     start_date = "2022-01-01"
     end_date = datetime.now().date()
@@ -165,19 +185,14 @@ def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
     )
     asset_allocation.sort_values(by="cvp", ascending=False, inplace=True)
 
-    return {
-        "status": "success",
-        "message": "Portfolio progress fetched successfully",
-        "data": {
-            "progress": progress.to_dict(orient="records"),
-            "asset_allocation": asset_allocation.to_dict(orient="records"),
-            "progress_ac": progrss_ac.to_dict(orient="records"),
-        },
-    }
+    return (
+        progress.to_dict(orient="records"),
+        asset_allocation.to_dict(orient="records"),
+        progrss_ac.to_dict(orient="records"),
+    )
 
 
-@router.post("/portfolio")
-def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
+def holdings(client_pan: str, portfolio: str):
 
     query = text(
         """
@@ -327,14 +342,10 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
     df.sort_values(by="current_value", ascending=False, inplace=True)
     summary = portfolio_summary(client_pan, portfolio)
 
-    return {
-        "status": "success",
-        "message": "Mutual fund holdings fetched successfully",
-        "data": {"holdings": df.to_dict(orient="records"), "summary": summary},
-    }
+    return df.to_dict(orient="records"), summary
 
 
-def portfolio_summary(client_pan: str = Form(...), portfolio: str = Form(...)):
+def portfolio_summary(client_pan: str, portfolio: str):
 
     sql = text(
         """

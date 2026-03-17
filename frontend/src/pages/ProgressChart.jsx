@@ -54,7 +54,7 @@ const ProgressChart = ({ data }) => {
   const [selectedPeriod, setSelectedPeriod] = useState("5Y");
 
   useEffect(() => {
-    if (data.length === 0) {
+    if (!data || !data.progress || data.progress.length === 0) {
       return;
     }
 

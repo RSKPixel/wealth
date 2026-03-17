@@ -12,10 +12,12 @@ const Portfolio = () => {
   const [refresh, setRefresh] = useState(false);
   const [summary, setSummary] = useState({});
   const [loading, setLoading] = useState(true);
+  const [loadingMessage, setLoadingMessage] = useState("");
   const [fvCycles, setFvCycles] = useState(5);
   const fileInputRef = useRef(null);
 
   useEffect(() => {
+    setLoadingMessage("Loading portfolio data...");
     setSelectedMenuItem("Portfolio");
 
     const fd = new FormData();
@@ -54,6 +56,7 @@ const Portfolio = () => {
 
   const handleEOD = () => {
     setLoading(true);
+    setLoadingMessage("Fetching EOD data...");
     fetch(`${api}/mutualfund/data/eod`)
       .then((response) => response.json())
       .then((data) => {
@@ -63,6 +66,7 @@ const Portfolio = () => {
 
   const handleHistoricalData = () => {
     setLoading(true);
+    setLoadingMessage("Fetching historical data...");
     fetch(`${api}/mutualfund/data/historical`)
       .then((response) => response.json())
       .then((data) => {
@@ -80,16 +84,26 @@ const Portfolio = () => {
     }
   };
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-full">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-cyan-900"></div>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="fixed inset-0 flex flex-col items-center justify-center bg-black/1 backdrop-blur-xs z-50">
+  //       <div className="flex items-center justify-center h-full">
+  //         <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-cyan-900"></div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="flex flex-col w-full px-4 mx-auto h-full min-h-0">
+      {loading && (
+        <div className="fixed inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-xs z-50">
+          <div className="flex flex-col gap-4 items-center justify-center h-full">
+            <span>{loadingMessage}</span>
+            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-cyan-900"></div>
+          </div>
+        </div>
+      )}
       <input
         type="file"
         ref={fileInputRef}

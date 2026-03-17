@@ -56,7 +56,7 @@ def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
                     transactions.instrument = eod.instrument
                 WHERE
                     transactions.transaction_date <= '{tdate}' AND
-                    (:portfolio = "All" OR portfolio = :portfolio) AND
+                    (:portfolio = 'All' OR transactions.portfolio = :portfolio) AND
                     client_pan = :client_pan
                 GROUP BY
                     transactions.instrument,
@@ -141,13 +141,13 @@ def portfolio_progress(client_pan: str = Form(...), portfolio: str = Form(...)):
         FROM
             portfolio
         WHERE
-            (:portfolio = 'All' OR portfolio = :portfolio) AND
-            client_pan=:client_pan
+            client_pan = :client_pan AND
+            (:portfolio = 'All' OR portfolio.portfolio = :portfolio)
         GROUP BY asset_class;
         """
     )
     with engine.connect() as connection:
-        params = {"client_pan": client_pan}
+        params = {"client_pan": client_pan, "portfolio": portfolio}
         result = connection.execute(sql, params)
         asset_allocation = pd.DataFrame(result.fetchall(), columns=result.keys())
 
@@ -335,42 +335,57 @@ def holdings(client_pan: str = Form(...), portfolio: str = Form(...)):
 
 
 def portfolio_summary(client_pan: str = Form(...), portfolio: str = Form(...)):
-    summary = {}
 
     sql = text(
         """
-            SELECT
-                CAST(SUM(holding_value) as numeric(14,2)) as holding_value,
-                CAST(SUM(current_value) as numeric(14,2)) as current_value
-            FROM
-                portfolio
-            WHERE client_pan = :client_pan
-        """
+        SELECT
+            COALESCE(CAST(SUM(holding_value) AS numeric(14,2)),0) AS holding_value,
+            COALESCE(CAST(SUM(current_value) AS numeric(14,2)),0) AS current_value
+        FROM portfolio
+        WHERE client_pan = :client_pan
+        AND (:portfolio = 'All' OR portfolio = :portfolio)
+    """
     )
+
+    params = {"client_pan": client_pan, "portfolio": portfolio}
 
     with engine.connect() as connection:
-        params = {"client_pan": client_pan}
-        result = connection.execute(sql, params)
-        summary = pd.DataFrame(result.fetchall(), columns=result.keys()).to_dict(
-            orient="records"
-        )[0]
+        df = pd.read_sql(sql, connection, params=params)
 
-    numeric_cols = ["holding_value", "current_value"]
-    for col in numeric_cols:
-        summary[col] = pd.to_numeric(summary[col], errors="coerce")
+    summary = df.iloc[0].to_dict()
 
-    summary["pl"] = round(summary["current_value"] - summary["holding_value"], 2)
-    summary["plp"] = round((summary["pl"] / summary["holding_value"]) * 100, 2)
-    summary["xirr"] = calc_xirr(client_pan, None, None, summary["current_value"])
-    summary["fv_5y"] = round(
-        summary["current_value"] * ((1 + (summary["xirr"] / 100)) ** 5), 0
+    holding_value = float(summary["holding_value"])
+    current_value = float(summary["current_value"])
+
+    summary.update(
+        {
+            "pl": 0,
+            "plp": 0,
+            "xirr": 0,
+            "fv_5y": 0,
+            "fv_10y": 0,
+            "fv_15y": 0,
+        }
     )
-    summary["fv_10y"] = round(
-        summary["current_value"] * ((1 + (summary["xirr"] / 100)) ** 10), 0
-    )
-    summary["fv_15y"] = round(
-        summary["current_value"] * ((1 + (summary["xirr"] / 100)) ** 15), 0
-    )
+
+    if current_value == 0:
+        return summary
+
+    # Profit/Loss
+    pl = current_value - holding_value
+    summary["pl"] = round(pl, 2)
+    summary["plp"] = round((pl / holding_value) * 100, 2)
+
+    # XIRR
+    xirr = calc_xirr(client_pan, None, None, current_value)
+    summary["xirr"] = xirr
+
+    # Future value projections
+    r = xirr / 100
+
+    summary["fv_5y"] = round(current_value * ((1 + r) ** 5), 0)
+    summary["fv_10y"] = round(current_value * ((1 + r) ** 10), 0)
+    summary["fv_15y"] = round(current_value * ((1 + r) ** 15), 0)
 
     return summary
 

@@ -115,8 +115,8 @@ const Portfolio = () => {
         </span>
       </div>
 
-      <div className="flex flex-col h-full overflow-auto">
-        <div className="bg-cyan-950/20 border-cyan-800 border text-gray-300 flex flex-col me-4 rounded-lg mb-4">
+      <div className="flex flex-col h-full min-h-0">
+        <div className="bg-cyan-950/20 border-cyan-800 border text-gray-300 flex flex-col rounded-lg mb-4">
           <div className="p-1 flex flex-row gap-4 border-b border-cyan-800 bg-cyan-700/40">
             <span className="ms-auto"></span>
             {portfolio.map((p) => (
@@ -167,10 +167,15 @@ const Portfolio = () => {
             </span>
           </div>
         </div>
-        <div className="flex flex-col pe-4 mb-4 w-full">
+        <div className="flex flex-col mb-4 w-full">
           <ProgressChart selectedPortfolio={selectedPortfolio} />
         </div>
-        <div className="grid grid-cols-3 gap-4 pe-4">
+        <div className="grid grid-cols-3 gap-4">
+          {holdings.length === 0 && (
+            <div className="flex items-center justify-center h-full col-span-3">
+              <p>No holdings data available</p>
+            </div>
+          )}
           {holdings.map((holding, index) => (
             <div
               key={index}

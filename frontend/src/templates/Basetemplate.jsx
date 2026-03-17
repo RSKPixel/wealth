@@ -10,7 +10,7 @@ const Basetemplate = ({ children }) => {
   ];
   return (
     <div className="flex flex-col text-sm tracking-wide uppercase h-screen">
-      <nav className="bg-cyan-950 border-b border-cyan-600 px-4 py-3 w-full shrink-0 ">
+      <nav className="bg-cyan-950 border-b border-cyan-600 px-4 py-3 w-full fixed">
         <div className="flex flex-row mx-auto justify-between items-center">
           <div className="font-bold text-white cursor-pointer">
             Wealth Framework
@@ -37,7 +37,7 @@ const Basetemplate = ({ children }) => {
         </div>
       </nav>
 
-      <main className="flex-1 min-h-0 overflow-hidden p-4">{children}</main>
+      <main className="flex-1 p-4 mt-12">{children}</main>
     </div>
   );
 };

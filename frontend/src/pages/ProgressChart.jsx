@@ -32,7 +32,6 @@ const ProgressChart = ({ selectedPortfolio }) => {
   const { api, client_pan } = useContext(GlobalContext);
   const [chartData, setChartData] = useState({});
   const [assetAllocationData, setAssetAllocationData] = useState({});
-  // const [assetClassData, setAssetClassData] = useState({});
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const charts = [
@@ -70,7 +69,10 @@ const ProgressChart = ({ selectedPortfolio }) => {
   }, [api, client_pan, selectedPortfolio]);
 
   useEffect(() => {
-    if (data.length === 0) return;
+    if (data.length === 0) {
+      setLoading(true);
+      return;
+    }
 
     const filteredData = data.progress.slice(
       -period[selectedPeriod] || data.length,
@@ -219,7 +221,6 @@ const ProgressChart = ({ selectedPortfolio }) => {
       ],
     };
 
-    console.log(ac);
     setAssetAllocationData(ac);
     setChartData(cd);
     setLoading(false);
@@ -259,22 +260,34 @@ const ProgressChart = ({ selectedPortfolio }) => {
         ))}
       </div>
       <div className="h-96 grid grid-cols-2 gap-4">
-        <div className="border-r border-cyan-900">
-          {chartData && (
+        <div className="border-r border-cyan-900 items-center justify-center flex">
+          {chartData &&
+          chartData["datasets"] &&
+          chartData["datasets"][0] &&
+          chartData["datasets"][0]["data"] &&
+          chartData["datasets"][0]["data"].length > 0 ? (
             <Line
               data={chartData}
               style={{ maxWidth: "100%", maxHeight: "100%" }}
               options={{ responsive: true, maintainAspectRatio: false }}
             />
+          ) : (
+            <p>No data available</p>
           )}
         </div>
-        <div className="pb-4">
-          {assetAllocationData && (
+        <div className="pb-4 items-center justify-center flex">
+          {assetAllocationData &&
+          assetAllocationData["datasets"] &&
+          assetAllocationData["datasets"][0] &&
+          assetAllocationData["datasets"][0]["data"] &&
+          assetAllocationData["datasets"][0]["data"].length > 0 ? (
             <Doughnut
               data={assetAllocationData}
               style={{ maxWidth: "100%", maxHeight: "100%" }}
               options={{ responsive: true, maintainAspectRatio: false }}
             />
+          ) : (
+            <p>No data available</p>
           )}
         </div>
       </div>

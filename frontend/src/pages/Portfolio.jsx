@@ -8,7 +8,7 @@ import BreadCrumbs from "../components/BreadCrumbs";
 const Portfolio = () => {
   const { api, setSelectedMenuItem, client_pan } = useContext(GlobalContext);
   const portfolio = ["All", "Mutual Fund", "Stocks"];
-  const [selectedPortfolio, setSelectedPortfolio] = useState("Mutual Fund");
+  const [selectedPortfolio, setSelectedPortfolio] = useState("All");
   const [holdings, setHoldings] = useState([]);
   const [refresh, setRefresh] = useState(false);
   const [summary, setSummary] = useState({});

@@ -123,18 +123,22 @@ const Portfolio = () => {
       <div className="grid grid-cols-2 w-full mb-4">
         <BreadCrumbs>Portfolio - {selectedPortfolio}</BreadCrumbs>
         <span className="flex flex-row pe-4 text-end hover:underline underline-offset-4 justify-end gap-3 items-center ">
-          <i
-            onClick={() => fileInputRef.current.click()}
-            className="bi bi-upload cursor-pointer hover:text-yellow-400"
-          ></i>
-          <i
-            className="bi bi-clock-history cursor-pointer hover:text-yellow-400"
-            onClick={handleHistoricalData}
-          ></i>
-          <i
-            className="bi bi-database  cursor-pointer hover:text-yellow-400"
-            onClick={handleEOD}
-          ></i>
+          {selectedPortfolio !== "All" && (
+            <>
+              <i
+                onClick={() => fileInputRef.current.click()}
+                className="bi bi-upload cursor-pointer hover:text-yellow-400"
+              ></i>
+              <i
+                className="bi bi-clock-history cursor-pointer hover:text-yellow-400"
+                onClick={handleHistoricalData}
+              ></i>
+              <i
+                className="bi bi-database  cursor-pointer hover:text-yellow-400"
+                onClick={handleEOD}
+              ></i>
+            </>
+          )}
         </span>
       </div>
 
